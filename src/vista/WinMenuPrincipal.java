@@ -42,11 +42,17 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 727, Short.MAX_VALUE)
+            .addGap(0, 711, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Arreglos");
+        jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
+        jMenu1.setBackground(new java.awt.Color(153, 255, 255));
+        jMenu1.setForeground(new java.awt.Color(0, 51, 204));
+        jMenu1.setText("ARREGLOS");
+        jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+
+        menuItArregloUni.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         menuItArregloUni.setText("Arreglo Unidimensional");
         menuItArregloUni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,7 +63,10 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Listas");
+        jMenu2.setBackground(new java.awt.Color(153, 153, 255));
+        jMenu2.setForeground(new java.awt.Color(102, 0, 204));
+        jMenu2.setText("LISTAS");
+        jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
