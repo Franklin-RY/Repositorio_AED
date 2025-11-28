@@ -102,5 +102,9 @@ public class PrgArreglosUni {
         Object[] fila = {codigos[pos], nombres[pos], sueldos[pos]};
         modelo.addRow(fila);
         tabla.setModel(modelo);
+        
+        System.out.println("Prueba Lucy");
     }
+    
+    
 }
