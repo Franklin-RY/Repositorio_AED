@@ -4,6 +4,7 @@ package vista;
 import controlador.PrgArreglosUni;
 import java.awt.Dimension;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
@@ -42,8 +43,6 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
         tablaOriginalIngre = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
         tablaActualizadaIngre = new javax.swing.JTable();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -51,6 +50,15 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
         jLabel9 = new javax.swing.JLabel();
         btnMostrarIngre = new javax.swing.JButton();
         txtNomIngre = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        btnInfoArreglo = new javax.swing.JButton();
+        btnInfoArregloParalelo = new javax.swing.JButton();
+        btnInfoUso = new javax.swing.JButton();
+        btnInfoDataOriginalIngre = new javax.swing.JButton();
+        btnDataAGuardarIngre = new javax.swing.JButton();
+        btnDataActualizadaIngre = new javax.swing.JButton();
+        btnInfoGuardar = new javax.swing.JButton();
+        btnInfoMostrarIngre = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -63,31 +71,31 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
         tablaOriginalElim = new javax.swing.JTable();
         jScrollPane4 = new javax.swing.JScrollPane();
         tablaActualizadaElim = new javax.swing.JTable();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         btnMostrarElim = new javax.swing.JButton();
+        jLabel27 = new javax.swing.JLabel();
+        btnInfoDataOriginalElim = new javax.swing.JButton();
+        btnDataAEliminar = new javax.swing.JButton();
+        btnDataActualizadaElim = new javax.swing.JButton();
+        btnInfoEliminar = new javax.swing.JButton();
+        btnInfoMostrarElim = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        txtCodIngre1 = new javax.swing.JTextField();
-        txtSueIngre1 = new javax.swing.JTextField();
         btnMayorSue = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         tablaOriginalMayorSue = new javax.swing.JTable();
         jScrollPane6 = new javax.swing.JScrollPane();
         tablaActualizadaMayorSue = new javax.swing.JTable();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        txtNomIngre1 = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        btnInfoDataOriginalMaSue = new javax.swing.JButton();
+        btnDataActualizadaMaSue = new javax.swing.JButton();
+        btnInfoMayorSue = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -261,46 +269,36 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
         tablaActualizadaIngre.setRowHeight(30);
         jScrollPane3.setViewportView(tablaActualizadaIngre);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Data Original");
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Data a guardar en el Arreglo Unidimensional");
-
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Arreglo Unidimensional actualizada");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel7.setText("Cod:       500");
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel7.setText("Código:       500");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel8.setText("Nom:     Esther");
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel8.setText("Nombre:     Esther");
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel9.setText("Sue:        5000");
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel9.setText("Sueldo:        5000.00");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel7)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
@@ -320,6 +318,74 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
         txtNomIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         txtNomIngre.setText("Esther");
 
+        jLabel26.setFont(new java.awt.Font("Stencil", 1, 36)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel26.setText("ARREGLOS PARALELOS UNIDIMENSIONALES");
+
+        btnInfoArreglo.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoArreglo.setText("INFORMACIÓN SOBRE ARREGLOS");
+        btnInfoArreglo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoArregloActionPerformed(evt);
+            }
+        });
+
+        btnInfoArregloParalelo.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoArregloParalelo.setText("INFORMACIÓN SOBRE ARREGLOS PARALELOS");
+        btnInfoArregloParalelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoArregloParaleloActionPerformed(evt);
+            }
+        });
+
+        btnInfoUso.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoUso.setText("USO");
+        btnInfoUso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoUsoActionPerformed(evt);
+            }
+        });
+
+        btnInfoDataOriginalIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoDataOriginalIngre.setText("Data Original");
+        btnInfoDataOriginalIngre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoDataOriginalIngreActionPerformed(evt);
+            }
+        });
+
+        btnDataAGuardarIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnDataAGuardarIngre.setText("Data a guardar");
+        btnDataAGuardarIngre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDataAGuardarIngreActionPerformed(evt);
+            }
+        });
+
+        btnDataActualizadaIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnDataActualizadaIngre.setText("Data actualizada");
+        btnDataActualizadaIngre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDataActualizadaIngreActionPerformed(evt);
+            }
+        });
+
+        btnInfoGuardar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoGuardar.setText("¿Qué hace el botón GUARDAR?");
+        btnInfoGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoGuardarActionPerformed(evt);
+            }
+        });
+
+        btnInfoMostrarIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoMostrarIngre.setText("¿Qué hace el botón MOSTRAR?");
+        btnInfoMostrarIngre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoMostrarIngreActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -327,20 +393,33 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(726, 726, 726)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btnInfoArreglo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnInfoArregloParalelo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnInfoUso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel26)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnInfoDataOriginalIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 314, Short.MAX_VALUE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnDataAGuardarIngre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDataActualizadaIngre, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(208, 208, 208)
+                        .addGap(80, 80, 80)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -349,19 +428,30 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtCodIngre, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtSueIngre)
-                            .addComponent(txtNomIngre, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
-                        .addGap(53, 53, 53)
+                            .addComponent(txtNomIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(13, 13, 13)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnGuardarIngre)
-                            .addComponent(btnMostrarIngre))))
+                            .addComponent(btnMostrarIngre))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnInfoGuardar)
+                            .addComponent(btnInfoMostrarIngre))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnInfoArreglo)
+                    .addComponent(btnInfoArregloParalelo)
+                    .addComponent(btnInfoUso))
+                .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(54, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(txtCodIngre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -374,23 +464,27 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
                             .addComponent(jLabel3)
                             .addComponent(txtSueIngre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(btnGuardarIngre)
+                        .addGap(17, 17, 17)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnGuardarIngre)
+                            .addComponent(btnInfoGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(40, 40, 40)
-                        .addComponent(btnMostrarIngre)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(70, 70, 70)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel5)
-                        .addComponent(jLabel6))
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(36, 36, 36))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnMostrarIngre)
+                            .addComponent(btnInfoMostrarIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnInfoDataOriginalIngre)
+                    .addComponent(btnDataAGuardarIngre)
+                    .addComponent(btnDataActualizadaIngre))
+                .addGap(6, 6, 6)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Ingresos", jPanel1);
@@ -562,46 +656,33 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
         tablaActualizadaElim.setRowHeight(30);
         jScrollPane4.setViewportView(tablaActualizadaElim);
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("Data Original");
-
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("Data a eliminar en el Arreglo Unidimensional");
-
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("Arreglo Unidimensional actualizada");
-
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel16.setText("Cod:       200");
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel16.setText("Código:       200");
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel17.setText("Nom:     Beatriz");
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel17.setText("Nombre:     Beatriz");
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel18.setText("Sue:        2000");
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel18.setText("Sueldo:        2000");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel18)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(55, 55, 55)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel16)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel17)
@@ -618,6 +699,50 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel27.setFont(new java.awt.Font("Stencil", 1, 36)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel27.setText("ARREGLOS PARALELOS UNIDIMENSIONALES");
+
+        btnInfoDataOriginalElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoDataOriginalElim.setText("Data Original");
+        btnInfoDataOriginalElim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoDataOriginalElimActionPerformed(evt);
+            }
+        });
+
+        btnDataAEliminar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnDataAEliminar.setText("Data a Eliminar ");
+        btnDataAEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDataAEliminarActionPerformed(evt);
+            }
+        });
+
+        btnDataActualizadaElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnDataActualizadaElim.setText("Data Actualizada ");
+        btnDataActualizadaElim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDataActualizadaElimActionPerformed(evt);
+            }
+        });
+
+        btnInfoEliminar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoEliminar.setText("¿Qué hace el botón ELIMINAR?");
+        btnInfoEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoEliminarActionPerformed(evt);
+            }
+        });
+
+        btnInfoMostrarElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoMostrarElim.setText("¿Qué hace el botón MOSTRAR?");
+        btnInfoMostrarElim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoMostrarElimActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -626,40 +751,52 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnInfoDataOriginalElim, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 314, Short.MAX_VALUE)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnDataAEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(btnDataActualizadaElim, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(208, 208, 208)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtNomElim, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCodElim, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSueElim, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(52, 52, 52)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnMostrarElim)
-                            .addComponent(btnEliminar))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(77, 77, 77)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtNomElim, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtCodElim, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtSueElim, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(52, 52, 52)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnMostrarElim)
+                                    .addComponent(btnEliminar))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnInfoEliminar)
+                                    .addComponent(btnInfoMostrarElim)))
+                            .addComponent(jLabel27))))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap(54, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
                             .addComponent(txtCodElim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -672,17 +809,19 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
                             .addComponent(jLabel12)
                             .addComponent(txtSueElim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(btnEliminar)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnEliminar)
+                            .addComponent(btnInfoEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(35, 35, 35)
-                        .addComponent(btnMostrarElim)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(70, 70, 70)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel14)
-                        .addComponent(jLabel15))
-                    .addComponent(jLabel13))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnMostrarElim)
+                            .addComponent(btnInfoMostrarElim, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(42, 42, 42)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnInfoDataOriginalElim)
+                    .addComponent(btnDataAEliminar)
+                    .addComponent(btnDataActualizadaElim))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
@@ -691,27 +830,14 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
                 .addGap(36, 36, 36))
         );
 
+        txtNomElim.setEnabled(false);
+        txtSueElim.setEnabled(false);
+
         jTabbedPane1.addTab("Eliminación", jPanel3);
 
         jPanel5.setBackground(new java.awt.Color(170, 252, 252));
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel19.setText("Codigo: ");
-
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel20.setText("Nombre:");
-
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel21.setText("Sueldo:");
-
-        txtCodIngre1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-
-        txtSueIngre1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-
-        btnMayorSue.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnMayorSue.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnMayorSue.setText("MAYOR SUELDO");
         btnMayorSue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -857,105 +983,116 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
         tablaActualizadaMayorSue.setRowHeight(30);
         jScrollPane6.setViewportView(tablaActualizadaMayorSue);
 
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel22.setText("Data Original");
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel23.setText("Se va a mostrar el");
 
-        jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel24.setText("Arreglo Unidimensional actualizada");
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel25.setText("mayor sueldo");
 
-        txtNomIngre1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-
-        jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel23.setText("Se va a mostrar el empleado");
-
-        jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel25.setText("con mayor sueldo");
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel29.setText("empleado con");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(32, 32, 32)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel29)
                     .addComponent(jLabel23))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
+                .addGap(34, 34, 34)
                 .addComponent(jLabel23)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel25)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jLabel28.setFont(new java.awt.Font("Stencil", 1, 36)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel28.setText("ARREGLOS PARALELOS UNIDIMENSIONALES");
+
+        btnInfoDataOriginalMaSue.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnInfoDataOriginalMaSue.setText("Data Original");
+        btnInfoDataOriginalMaSue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoDataOriginalMaSueActionPerformed(evt);
+            }
+        });
+
+        btnDataActualizadaMaSue.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnDataActualizadaMaSue.setText("Data Actualizada ");
+        btnDataActualizadaMaSue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDataActualizadaMaSueActionPerformed(evt);
+            }
+        });
+
+        btnInfoMayorSue.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnInfoMayorSue.setText("¿QUÉ HACE EL BOTÓN MAYOR SUELDO?");
+        btnInfoMayorSue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoMayorSueActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(183, 183, 183)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtCodIngre1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtSueIngre1)
-                    .addComponent(txtNomIngre1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
-                .addGap(53, 53, 53)
-                .addComponent(btnMayorSue)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(56, 56, 56)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(btnInfoMayorSue, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addComponent(btnMayorSue, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+                            .addComponent(btnInfoDataOriginalMaSue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnDataActualizadaMaSue, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(64, 64, 64))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(82, 82, 82)
+                .addComponent(jLabel28)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addContainerGap(42, Short.MAX_VALUE)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel19)
-                            .addComponent(txtCodIngre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel20)
-                            .addComponent(txtNomIngre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel21)
-                            .addComponent(txtSueIngre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(btnMayorSue)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(70, 70, 70)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel24)
-                    .addComponent(jLabel22))
+                .addGap(50, 50, 50)
+                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMayorSue, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInfoMayorSue, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnInfoDataOriginalMaSue, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDataActualizadaMaSue, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(48, 48, 48))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(61, 61, 61))
         );
 
         jTabbedPane1.addTab("Mayor Sueldo", jPanel5);
@@ -964,7 +1101,7 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1033,10 +1170,222 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
         refPrgArreglosUni.mayorSueldo(tablaActualizadaMayorSue);
     }//GEN-LAST:event_btnMayorSueActionPerformed
 
+    private void btnInfoArregloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoArregloActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué es un arreglo unidimensional?",
+                " \n Un arreglo unidimensional es una estructura \n" + 
+                " que guarda varios datos del mismo tipo en \n" +
+                " una sola lista ordenada.\n\n " +
+                " Ejemplo: un arreglo de nombres: \n  [\"Ana\", \"Beatriz\", \"Cesar\", \"Daniel\"] \n", 
+                "imagenes/arreglo_unidimensional.png");
+    }//GEN-LAST:event_btnInfoArregloActionPerformed
+
+    private void btnInfoArregloParaleloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoArregloParaleloActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué significa paralelo?",
+                " Cuando tenemos varios arreglos unidimensionales \n" + 
+                " que están relacionados posición por posición, \n" +
+                " se llaman arreglos paralelos. \n\n " +
+                " Ejemplo: \n " +
+                " \tcodigos  " + " [0] = 100\n" +
+                " \tnombres " + "[0] = \"Ana\"\n" +
+                " \tsueldos  " + " [0] = 1000.00\n\n" +
+                " Todos estos valores representan al mismo empleado. ",
+                "imagenes/arreglos_paralelos.png");
+    }//GEN-LAST:event_btnInfoArregloParaleloActionPerformed
+
+    private void btnInfoUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoUsoActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Por qué se usan?",
+                " \n Sirven para organizar información relacionada cuando \n" + 
+                " aún no usamos clases u objetos. \n" +
+                " Cada índice representa un registro completo. \n\n " +
+                " Ejemplo: \n " +
+                " índice 2 → Código=300, Nombre=Cesar, Sueldo=3000 \n",
+                "imagenes/arreglos_uso.png");
+    }//GEN-LAST:event_btnInfoUsoActionPerformed
+
+    private void btnInfoDataOriginalIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoDataOriginalIngreActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué es la Data Original?",
+                " \n La Data Original muestra los registros que ya están \n" + 
+                " guardados en los arreglos paralelos. \n\n" +
+                " Cada fila representa un empleado con su código, \n" +
+                " nombre y sueldo.\n\n " +
+                " Esta información se carga al iniciar el programa.\n ",
+                "imagenes/data_original.png");
+    }//GEN-LAST:event_btnInfoDataOriginalIngreActionPerformed
+
+    private void btnDataAGuardarIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataAGuardarIngreActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué es la Data a Guardar?",
+                " \n La Data a Guardar muestra los datos que el usuario \n" + 
+                " ha ingresado en los campos de texto. \n\n" +
+                " Estos datos aún no están guardados en los arreglos \n" +
+                " paralelos, pero están listos para ser insertados. \n",
+                "imagenes/data_a_guardar.png");
+    }//GEN-LAST:event_btnDataAGuardarIngreActionPerformed
+
+    private void btnDataActualizadaIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataActualizadaIngreActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué es la Data Actualizada?",
+                " \n La Data Actualizada muestra cómo quedan los arreglos \n" + 
+                " después de guardar un nuevo registro. \n\n" +
+                " Aquí se ve la tabla con el nuevo empleado \n" +
+                " añadido al final.\n ",
+                "imagenes/data_actualizada.png");
+    }//GEN-LAST:event_btnDataActualizadaIngreActionPerformed
+
+    private void btnInfoDataOriginalElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoDataOriginalElimActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué es la Data Original?",
+                " La Data Original muestra los registros que ya están \n" + 
+                " guardados en los arreglos paralelos. \n\n" +
+                " Cada fila representa un empleado con su código, \n" +
+                " nombre y sueldo.\n\n" +
+                " Esta información se carga al iniciar el programa.\n\n" +
+                " Es la información antes de realizar la eliminación. ",
+                "imagenes/data_original.png");
+    }//GEN-LAST:event_btnInfoDataOriginalElimActionPerformed
+
+    private void btnDataAEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataAEliminarActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué es la Data a Eliminar?",
+                " \n La Data a Eliminar muestra el registro que el usuario \n" + 
+                " ha seleccionado para eliminar. \n\n" +
+                " Este registro se identifica por su código y se muestra \n" +
+                " antes de ser removido. \n",
+                "imagenes/data_a_eliminar.png");
+    }//GEN-LAST:event_btnDataAEliminarActionPerformed
+
+    private void btnDataActualizadaElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataActualizadaElimActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué es la Data Actualizada?",
+                " \n La Data Actualizada muestra cómo quedan los arreglos \n" + 
+                " después de eliminar el registro seleccionado. \n\n" +
+                " Los elementos posteriores se recorren para mantener \n" +
+                " la estructura sin espacios vacíos. \n ",
+                "imagenes/data_actualizada_elim.png");
+    }//GEN-LAST:event_btnDataActualizadaElimActionPerformed
+
+    private void btnInfoDataOriginalMaSueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoDataOriginalMaSueActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué es la Data Original?",
+                " La Data Original muestra todos los registros guardados \n" + 
+                " en los arreglos paralelos. \n\n" +
+                " Cada fila representa un empleado con su código, \n" +
+                " nombre y sueldo.\n\n" +
+                " Esta información es la base para calcular quién tiene \n" +
+                " el mayor sueldo. ",
+                "imagenes/data_original.png");
+    }//GEN-LAST:event_btnInfoDataOriginalMaSueActionPerformed
+
+    private void btnDataActualizadaMaSueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataActualizadaMaSueActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué es la Data Actualizada?",
+                " \n La Data Actualizada muestra el resultado del cálculo \n" + 
+                " del mayor sueldo. \n\n" +
+                " Aquí se presenta el empleado que tiene el sueldo \n" +
+                " más alto entre todos los registros. \n ",
+                "imagenes/data_actualizada_mayor.png");
+    }//GEN-LAST:event_btnDataActualizadaMaSueActionPerformed
+
+    private void btnInfoMayorSueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoMayorSueActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿¿Qué hace el botón MAYOR SUELDO?",
+                " Este botón recorre el arreglo de sueldos y compara \n" + 
+                " cada valor. \n\n" +
+                " Cuando encuentra el sueldo más alto, muestra en \n" +
+                " una tabla el registro completo del empleado que \n" +
+                " lo posee. \n\n" +
+                " Esto permite identificar rápidamente quién \n" +
+                " gana más. ",
+                "imagenes/funcion_mayor_sueldo.png");
+    }//GEN-LAST:event_btnInfoMayorSueActionPerformed
+
+    private void btnInfoGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoGuardarActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué hace el botón GUARDAR?",
+                " \n El botón GUARDAR toma los datos que el usuario ha ingresado \n" + 
+                " en los campos de texto (Código, Nombre y Sueldo) y los \n" +
+                " guarda en los arreglos paralelos. \n\n" +
+                " Cada nuevo registro se añade al final de los arreglos, \n" +
+                " ocupando la siguiente posición disponible.\n ",
+                "imagenes/guardar.png");
+    }//GEN-LAST:event_btnInfoGuardarActionPerformed
+
+    private void btnInfoMostrarIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoMostrarIngreActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué hace el botón MOSTRAR en Ingresos?",
+                " El botón MOSTRAR actualiza la tabla de 'Data Actualizada' con todos \n" + 
+                " los registros guardados. \n\n" +
+                " Después de presionar GUARDAR para añadir un nuevo empleado, este \n" +
+                " botón permite visualizar cómo quedó la lista completa de empleados\n" +
+                " en los arreglos paralelos. \n\n" +
+                " Así puedes confirmar que el nuevo registro fue añadido correctamente.",
+                "imagenes/data_actualizada.png");
+    }//GEN-LAST:event_btnInfoMostrarIngreActionPerformed
+
+    private void btnInfoEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoEliminarActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué hace el botón ELIMINAR?",
+                " El botón ELIMINAR busca el código ingresado por \n" + 
+                " el usuario en los arreglos paralelos. \n\n" +
+                " Si lo encuentra, elimina ese registro y recorre \n" +
+                " los demás elementos para llenar el espacio. \n\n " +
+                " Esto mantiene la continuidad de los datos \n" +
+                " sin dejar huecos. ",
+                "imagenes/eliminar_funcion.png");
+    }//GEN-LAST:event_btnInfoEliminarActionPerformed
+
+    private void btnInfoMostrarElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoMostrarElimActionPerformed
+        refPrgArreglosUni.mostrarInfo(
+                this, 
+                "¿Qué hace el botón MOSTRAR en Eliminación?",
+                " El botón MOSTRAR actualiza la tabla de 'Data Actualizada' \n" + 
+                " después de eliminar un registro. \n\n" +
+                " Cuando se elimina un empleado, los demás registros se \n" +
+                " recorren para llenar el espacio vacío. \n\n" +
+                " Este botón permite visualizar la nueva lista de empleados \n" +
+                " sin el registro eliminado. ",
+                "imagenes/data_actualizada_elim.png");
+    }//GEN-LAST:event_btnInfoMostrarElimActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDataAEliminar;
+    private javax.swing.JButton btnDataAGuardarIngre;
+    private javax.swing.JButton btnDataActualizadaElim;
+    private javax.swing.JButton btnDataActualizadaIngre;
+    private javax.swing.JButton btnDataActualizadaMaSue;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGuardarIngre;
+    private javax.swing.JButton btnInfoArreglo;
+    private javax.swing.JButton btnInfoArregloParalelo;
+    private javax.swing.JButton btnInfoDataOriginalElim;
+    private javax.swing.JButton btnInfoDataOriginalIngre;
+    private javax.swing.JButton btnInfoDataOriginalMaSue;
+    private javax.swing.JButton btnInfoEliminar;
+    private javax.swing.JButton btnInfoGuardar;
+    private javax.swing.JButton btnInfoMayorSue;
+    private javax.swing.JButton btnInfoMostrarElim;
+    private javax.swing.JButton btnInfoMostrarIngre;
+    private javax.swing.JButton btnInfoUso;
     private javax.swing.JButton btnMayorSue;
     private javax.swing.JButton btnMostrarElim;
     private javax.swing.JButton btnMostrarIngre;
@@ -1044,23 +1393,17 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1086,12 +1429,9 @@ public class WinArreglosUni extends javax.swing.JInternalFrame {
     private javax.swing.JTable tablaOriginalMayorSue;
     private javax.swing.JTextField txtCodElim;
     private javax.swing.JTextField txtCodIngre;
-    private javax.swing.JTextField txtCodIngre1;
     private javax.swing.JTextField txtNomElim;
     private javax.swing.JTextField txtNomIngre;
-    private javax.swing.JTextField txtNomIngre1;
     private javax.swing.JTextField txtSueElim;
     private javax.swing.JTextField txtSueIngre;
-    private javax.swing.JTextField txtSueIngre1;
     // End of variables declaration//GEN-END:variables
 }

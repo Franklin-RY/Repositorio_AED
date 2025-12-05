@@ -1,7 +1,13 @@
 
 package controlador;
 
+import java.awt.Component;
+import java.awt.Font;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -9,9 +15,9 @@ import javax.swing.table.DefaultTableModel;
  * @author Franklin
  */
 public class PrgArreglosUni {
-    int[] codigos = new int[50];
-    String[] nombres = new String[50];
-    float[] sueldos = new float[50];
+    int[] codigos = new int[51];
+    String[] nombres = new String[51];
+    float[] sueldos = new float[51];
     private int tamaño = 4;
 
     public PrgArreglosUni() 
@@ -102,9 +108,28 @@ public class PrgArreglosUni {
         Object[] fila = {codigos[pos], nombres[pos], sueldos[pos]};
         modelo.addRow(fila);
         tabla.setModel(modelo);
-        
-        System.out.println("Prueba Lucy");
     }
     
-    
+    public void mostrarInfo(Component padre, String titulo, String mensaje, String rutaImagen) 
+    {
+        JTextArea areaTexto = new JTextArea(mensaje);
+        areaTexto.setFont(new Font("Arial", Font.PLAIN, 20));
+        areaTexto.setEditable(false);
+
+        // Escalar imagen
+        ImageIcon iconoOriginal = new ImageIcon(rutaImagen);
+        Image imagenEscalada = iconoOriginal.getImage().getScaledInstance(400, 200, Image.SCALE_SMOOTH);
+        ImageIcon iconoEscalado = new ImageIcon(imagenEscalada);
+
+        // Mostrar JOptionPane con texto grande + imagen
+        JOptionPane.showMessageDialog(
+            padre,
+            areaTexto,
+            titulo,
+            JOptionPane.INFORMATION_MESSAGE,
+            iconoEscalado
+        );
+    }
+
+
 }
