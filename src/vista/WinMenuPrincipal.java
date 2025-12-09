@@ -10,9 +10,6 @@ package vista;
  */
 public class WinMenuPrincipal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form WinMenuPrincipal
-     */
     public WinMenuPrincipal() {
         initComponents();
     }
@@ -30,7 +27,13 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         menuItArregloUni = new javax.swing.JMenuItem();
+        menuItArregloBidi = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        menuItListaSimple = new javax.swing.JMenuItem();
+        menuItListaDoble = new javax.swing.JMenuItem();
+        menuItListaCircular = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        menuItArbolBinarioBusqueda = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,6 +54,11 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         jMenu1.setForeground(new java.awt.Color(0, 51, 204));
         jMenu1.setText("ARREGLOS");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
 
         menuItArregloUni.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         menuItArregloUni.setText("Arreglo Unidimensional");
@@ -61,13 +69,46 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(menuItArregloUni);
 
+        menuItArregloBidi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        menuItArregloBidi.setText("Arreglo Bidimensional");
+        menuItArregloBidi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItArregloBidiActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuItArregloBidi);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setBackground(new java.awt.Color(153, 153, 255));
         jMenu2.setForeground(new java.awt.Color(102, 0, 204));
         jMenu2.setText("LISTAS");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+
+        menuItListaSimple.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        menuItListaSimple.setText("Lista Simple");
+        jMenu2.add(menuItListaSimple);
+
+        menuItListaDoble.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        menuItListaDoble.setText("Lista Doble");
+        jMenu2.add(menuItListaDoble);
+
+        menuItListaCircular.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        menuItListaCircular.setText("Lista Circular");
+        jMenu2.add(menuItListaCircular);
+
         jMenuBar1.add(jMenu2);
+
+        jMenu3.setBackground(new java.awt.Color(153, 0, 51));
+        jMenu3.setForeground(new java.awt.Color(153, 0, 51));
+        jMenu3.setText("ARBOLES");
+        jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+
+        menuItArbolBinarioBusqueda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        menuItArbolBinarioBusqueda.setText("Arbol Binario de Busqueda");
+        jMenu3.add(menuItArbolBinarioBusqueda);
+
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -90,6 +131,16 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         escritorio.add(objetoArreglosUni);
         objetoArreglosUni.setVisible(true);
     }//GEN-LAST:event_menuItArregloUniActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void menuItArregloBidiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItArregloBidiActionPerformed
+        vista.WinArreglosBidi objetoArreglosBidi = new vista.WinArreglosBidi();
+        escritorio.add(objetoArreglosBidi);
+        objetoArreglosBidi.setVisible(true);
+    }//GEN-LAST:event_menuItArregloBidiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,7 +181,13 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem menuItArbolBinarioBusqueda;
+    private javax.swing.JMenuItem menuItArregloBidi;
     private javax.swing.JMenuItem menuItArregloUni;
+    private javax.swing.JMenuItem menuItListaCircular;
+    private javax.swing.JMenuItem menuItListaDoble;
+    private javax.swing.JMenuItem menuItListaSimple;
     // End of variables declaration//GEN-END:variables
 }

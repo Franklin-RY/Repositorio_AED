@@ -18,7 +18,7 @@ public class PrgArreglosUni {
     int[] codigos = new int[51];
     String[] nombres = new String[51];
     float[] sueldos = new float[51];
-    private int tamaño = 4;
+    private int indice = 4;
 
     public PrgArreglosUni() 
     {
@@ -40,17 +40,17 @@ public class PrgArreglosUni {
     
     public void guardarDatos(int cod, String nom, float sue)
     {
-        codigos[tamaño] = cod;
-        nombres[tamaño] = nom;
-        sueldos[tamaño] = sue;
-        tamaño++;
+        codigos[indice] = cod;
+        nombres[indice] = nom;
+        sueldos[indice] = sue;
+        indice++;
     }
     
     public void mostrarDatos(JTable tabla)
     {
         DefaultTableModel modelo = crearModeloBase();
         
-        for (int i = 0; i < tamaño; i++) 
+        for (int i = 0; i < indice; i++) 
         {
             Object[] fila = {codigos[i], nombres[i], sueldos[i]};
             modelo.addRow(fila);
@@ -69,7 +69,7 @@ public class PrgArreglosUni {
     public void eliminarXcodigo(int cod)
     {
         int pos = -1;
-        for (int i = 0; i < tamaño; i++)
+        for (int i = 0; i < indice; i++)
         {
             if (codigos[i] == cod)
             {
@@ -79,13 +79,18 @@ public class PrgArreglosUni {
         }
         if (pos != -1)
         {
-            for (int i = pos; i < tamaño - 1; i++)
+            for (int i = pos; i < indice - 1; i++)
             {
                 codigos[i] = codigos[i+1];
                 nombres[i] = nombres[i+1];
                 sueldos[i] = sueldos[i+1];
             }
-            tamaño--;
+            indice--;
+            JOptionPane.showMessageDialog(null, "Empleado eliminado");
+        }
+        else 
+        {
+            JOptionPane.showMessageDialog(null, "Introducir un código valido");
         }
     }
     
@@ -96,7 +101,7 @@ public class PrgArreglosUni {
         float mayorSue = sueldos[0];
         int pos = 0;
         
-        for(int i = 0; i < tamaño; i++)
+        for(int i = 0; i < indice; i++)
         {
             if (sueldos[i] > mayorSue)
             {
@@ -116,12 +121,10 @@ public class PrgArreglosUni {
         areaTexto.setFont(new Font("Arial", Font.PLAIN, 20));
         areaTexto.setEditable(false);
 
-        // Escalar imagen
         ImageIcon iconoOriginal = new ImageIcon(rutaImagen);
         Image imagenEscalada = iconoOriginal.getImage().getScaledInstance(400, 200, Image.SCALE_SMOOTH);
         ImageIcon iconoEscalado = new ImageIcon(imagenEscalada);
 
-        // Mostrar JOptionPane con texto grande + imagen
         JOptionPane.showMessageDialog(
             padre,
             areaTexto,
