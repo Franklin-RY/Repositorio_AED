@@ -10,12 +10,16 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
     WinArreglosUni refWinArreglosUni;
     WinArreglosBidi refWinArreglosBidi;
     WinListaSimple refWinListaSimple;
+    WinListaDoble refWinListaDoble;
+    WinListaCircular refWinListaCircular;
     
     public WinMenuPrincipal() {
         initComponents();
         refWinArreglosUni = new WinArreglosUni();
         refWinArreglosBidi = new WinArreglosBidi();
         refWinListaSimple = new WinListaSimple();
+        refWinListaDoble = new WinListaDoble();
+        refWinListaCircular = new WinListaCircular();
     }
 
     @SuppressWarnings("unchecked")
@@ -89,10 +93,20 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
 
         menuItListaDoble.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         menuItListaDoble.setText("Lista Doble");
+        menuItListaDoble.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItListaDobleActionPerformed(evt);
+            }
+        });
         jMenu2.add(menuItListaDoble);
 
         menuItListaCircular.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         menuItListaCircular.setText("Lista Circular");
+        menuItListaCircular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItListaCircularActionPerformed(evt);
+            }
+        });
         jMenu2.add(menuItListaCircular);
 
         jMenuBar1.add(jMenu2);
@@ -138,6 +152,16 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         escritorio.add(refWinArreglosBidi);
         refWinArreglosBidi.setVisible(true);
     }//GEN-LAST:event_menuItArregloBidiActionPerformed
+
+    private void menuItListaCircularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItListaCircularActionPerformed
+        escritorio.add(refWinListaCircular);
+        refWinListaCircular.setVisible(true);
+    }//GEN-LAST:event_menuItListaCircularActionPerformed
+
+    private void menuItListaDobleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItListaDobleActionPerformed
+        escritorio.add(refWinListaDoble);
+        refWinListaDoble.setVisible(true);
+    }//GEN-LAST:event_menuItListaDobleActionPerformed
 
     /**
      * @param args the command line arguments
