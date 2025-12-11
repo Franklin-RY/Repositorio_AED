@@ -11,14 +11,10 @@ import modelo.NodoLD;
 
 public class PrgListaDoble
 {
-    NodoLD ini, fin, nuevo;
+    NodoLD ini = null;
+    NodoLD fin = null;
+    NodoLD nuevo;
     Empleado emple;
-    
-    public PrgListaDoble()
-    {
-        ini = null;
-        fin = null;
-    }
     
     public boolean estaVacia()
     {

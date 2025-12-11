@@ -155,7 +155,7 @@ public class PrgListaCircular
         areaTexto.setEditable(false);
 
         ImageIcon iconoOriginal = new ImageIcon(rutaImagen);
-        Image imagenEscalada = iconoOriginal.getImage().getScaledInstance(400, 200, Image.SCALE_SMOOTH);
+        Image imagenEscalada = iconoOriginal.getImage().getScaledInstance(250, 200, Image.SCALE_SMOOTH);
         ImageIcon iconoEscalado = new ImageIcon(imagenEscalada);
 
         JOptionPane.showMessageDialog(

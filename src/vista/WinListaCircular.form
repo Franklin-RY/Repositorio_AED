@@ -4,7 +4,7 @@
   <Properties>
     <Property name="closable" type="boolean" value="true"/>
     <Property name="iconifiable" type="boolean" value="true"/>
-    <Property name="title" type="java.lang.String" value="Listas Enlazadas Simples"/>
+    <Property name="title" type="java.lang.String" value="Lista Enlazada Circular"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -68,13 +68,13 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="btnInfoListaSimple" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnInfoOrganizacionListaSimple" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnInfoUso" min="-2" pref="91" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="btnInfoListaCircular" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnInfoOrganizacionListaCircular" min="-2" pref="356" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnInfoUso" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -136,8 +136,8 @@
                       <Component id="jLabel26" min="-2" pref="64" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnInfoListaSimple" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnInfoOrganizacionListaSimple" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnInfoListaCircular" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnInfoOrganizacionListaCircular" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnInfoUso" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="42" max="32767" attributes="0"/>
@@ -358,29 +358,29 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="99" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="LISTAS ENLAZADAS SIMPLES"/>
+                <Property name="text" type="java.lang.String" value="LISTA ENLAZADA CIRCULAR"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnInfoListaSimple">
+            <Component class="javax.swing.JButton" name="btnInfoListaCircular">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="TEORIA SOBRE LISTA SIMPLE"/>
+                <Property name="text" type="java.lang.String" value="TEORIA SOBRE LISTA CIRCULAR"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInfoListaSimpleActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInfoListaCircularActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnInfoOrganizacionListaSimple">
+            <Component class="javax.swing.JButton" name="btnInfoOrganizacionListaCircular">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="&#xbf;C&#xd3;MO SE ORGANIZA UNA LISTA ENLAZADA SIMPLE?"/>
+                <Property name="text" type="java.lang.String" value="&#xbf;C&#xd3;MO SE ORGANIZA UNA LISTA CIRCULAR?"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInfoOrganizacionListaSimpleActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInfoOrganizacionListaCircularActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnInfoUso">
@@ -750,7 +750,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="99" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="LISTAS ENLAZADAS SIMPLES"/>
+                <Property name="text" type="java.lang.String" value="LISTA ENLAZADA CIRCULAR"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnInfoDataOriginalElim">

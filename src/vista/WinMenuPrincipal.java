@@ -12,6 +12,7 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
     WinListaSimple refWinListaSimple;
     WinListaDoble refWinListaDoble;
     WinListaCircular refWinListaCircular;
+    WinPila refWinPila;
     
     public WinMenuPrincipal() {
         initComponents();
@@ -20,6 +21,7 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         refWinListaSimple = new WinListaSimple();
         refWinListaDoble = new WinListaDoble();
         refWinListaCircular = new WinListaCircular();
+        refWinPila = new WinPila();
     }
 
     @SuppressWarnings("unchecked")
@@ -35,6 +37,9 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         menuItListaSimple = new javax.swing.JMenuItem();
         menuItListaDoble = new javax.swing.JMenuItem();
         menuItListaCircular = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        menuItPila = new javax.swing.JMenuItem();
+        menuItCola = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         menuItArbolBinarioBusqueda = new javax.swing.JMenuItem();
 
@@ -48,7 +53,7 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 712, Short.MAX_VALUE)
+            .addGap(0, 713, Short.MAX_VALUE)
         );
 
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -111,6 +116,25 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu1.setForeground(new java.awt.Color(0, 153, 0));
+        jMenu1.setText("PILA / COLA");
+        jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+
+        menuItPila.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        menuItPila.setText("Pila");
+        menuItPila.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItPilaActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuItPila);
+
+        menuItCola.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        menuItCola.setText("Cola");
+        jMenu1.add(menuItCola);
+
+        jMenuBar1.add(jMenu1);
+
         jMenu3.setBackground(new java.awt.Color(153, 0, 51));
         jMenu3.setForeground(new java.awt.Color(153, 0, 51));
         jMenu3.setText("ARBOLES");
@@ -163,6 +187,11 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         refWinListaDoble.setVisible(true);
     }//GEN-LAST:event_menuItListaDobleActionPerformed
 
+    private void menuItPilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItPilaActionPerformed
+        escritorio.add(refWinPila);
+        refWinPila.setVisible(true);
+    }//GEN-LAST:event_menuItPilaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -200,6 +229,7 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane escritorio;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -207,8 +237,10 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuItArbolBinarioBusqueda;
     private javax.swing.JMenuItem menuItArregloBidi;
     private javax.swing.JMenuItem menuItArregloUni;
+    private javax.swing.JMenuItem menuItCola;
     private javax.swing.JMenuItem menuItListaCircular;
     private javax.swing.JMenuItem menuItListaDoble;
     private javax.swing.JMenuItem menuItListaSimple;
+    private javax.swing.JMenuItem menuItPila;
     // End of variables declaration//GEN-END:variables
 }

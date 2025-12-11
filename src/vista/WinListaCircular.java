@@ -41,8 +41,8 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
         btnMostrarIngre = new javax.swing.JButton();
         txtNomIngre = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
-        btnInfoListaSimple = new javax.swing.JButton();
-        btnInfoOrganizacionListaSimple = new javax.swing.JButton();
+        btnInfoListaCircular = new javax.swing.JButton();
+        btnInfoOrganizacionListaCircular = new javax.swing.JButton();
         btnInfoUso = new javax.swing.JButton();
         btnInfoDataOriginalIngre = new javax.swing.JButton();
         btnDataAGuardarIngre = new javax.swing.JButton();
@@ -75,7 +75,7 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setTitle("Listas Enlazadas Simples");
+        setTitle("Lista Enlazada Circular");
 
         jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -158,21 +158,21 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
 
         jLabel26.setFont(new java.awt.Font("Stencil", 1, 36)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel26.setText("LISTAS ENLAZADAS SIMPLES");
+        jLabel26.setText("LISTA ENLAZADA CIRCULAR");
 
-        btnInfoListaSimple.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnInfoListaSimple.setText("TEORIA SOBRE LISTA SIMPLE");
-        btnInfoListaSimple.addActionListener(new java.awt.event.ActionListener() {
+        btnInfoListaCircular.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoListaCircular.setText("TEORIA SOBRE LISTA CIRCULAR");
+        btnInfoListaCircular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInfoListaSimpleActionPerformed(evt);
+                btnInfoListaCircularActionPerformed(evt);
             }
         });
 
-        btnInfoOrganizacionListaSimple.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnInfoOrganizacionListaSimple.setText("¿CÓMO SE ORGANIZA UNA LISTA ENLAZADA SIMPLE?");
-        btnInfoOrganizacionListaSimple.addActionListener(new java.awt.event.ActionListener() {
+        btnInfoOrganizacionListaCircular.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoOrganizacionListaCircular.setText("¿CÓMO SE ORGANIZA UNA LISTA CIRCULAR?");
+        btnInfoOrganizacionListaCircular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInfoOrganizacionListaSimpleActionPerformed(evt);
+                btnInfoOrganizacionListaCircularActionPerformed(evt);
             }
         });
 
@@ -240,13 +240,13 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(90, 90, 90)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnInfoListaSimple)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnInfoOrganizacionListaSimple)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnInfoUso, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(btnInfoListaCircular)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnInfoOrganizacionListaCircular, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnInfoUso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -290,8 +290,8 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
                 .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnInfoListaSimple)
-                    .addComponent(btnInfoOrganizacionListaSimple)
+                    .addComponent(btnInfoListaCircular)
+                    .addComponent(btnInfoOrganizacionListaCircular)
                     .addComponent(btnInfoUso))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -411,7 +411,7 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
 
         jLabel27.setFont(new java.awt.Font("Stencil", 1, 36)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel27.setText("LISTAS ENLAZADAS SIMPLES");
+        jLabel27.setText("LISTA ENLAZADA CIRCULAR");
 
         btnInfoDataOriginalElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnInfoDataOriginalElim.setText("Data Original");
@@ -550,7 +550,7 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 950, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -563,28 +563,25 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
     private void btnInfoMostrarElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoMostrarElimActionPerformed
         refPrgListaCircular.mostrarInfo(
             this,
-            " ¿Qué hace el botón MOSTRAR en Eliminación?",
-            "\n El botón MOSTRAR recorre la lista enlazada desde el \n" +
-            " inicio hasta el fin y actualiza el área de texto \n" +
-            " con los datos actuales de cada nodo. \n\n" +
-            " Después de eliminar un nodo, este botón permite \n" +
-            " visualizar cómo quedó la lista reorganizada. \n",
+            "¿Qué hace el botón MOSTRAR?",
+            " \n El botón MOSTRAR recorre la lista circular.\n" +
+            " Usa un bucle do-while para visitar nodos.\n" +
+            " Se muestran los datos en el área de texto.\n\n" +
+            " Después de eliminar, refleja la lista actual.\n",
             "imagenes/mostrar_eliminacion_lista.png");
     }//GEN-LAST:event_btnInfoMostrarElimActionPerformed
 
     private void btnInfoEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoEliminarActionPerformed
         refPrgListaCircular.mostrarInfo(
             this,
-            "¿Qué hace el botón ELIMINAR?",
-            " El botón ELIMINAR busca el nodo que contiene el código \n" +
-            " ingresado por el usuario. \n" +
-            " Si lo encuentra, elimina ese nodo de la lista enlazada simple. \n\n" +
-            " La lista se reorganiza automáticamente: \n" +
-            " - Si es el primer nodo, se actualiza el inicio. \n" +
-            " - Si es el último, se actualiza el fin. \n" +
-            " - Si está en medio, se enlazan los nodos anterior y siguiente. \n\n" +
-            " Así se mantiene la continuidad de la lista sin dejar huecos. ",
-            "imagenes/eliminar_lista.png");
+             "¿Qué hace el botón ELIMINAR?",
+            " \n El botón ELIMINAR busca el nodo con el código.\n" +
+            " Si lo encuentra, elimina ese nodo de la lista.\n" +
+            " Si es el único nodo, la lista queda vacía.\n" +
+            " Si es el primero, inicio apunta al siguiente.\n" +
+            " Si es el último, fin apunta al anterior.\n" +
+            " Si está en medio, se reconectan los punteros.\n",
+            "");
     }//GEN-LAST:event_btnInfoEliminarActionPerformed
 
     private void btnDataActualizadaElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataActualizadaElimActionPerformed
@@ -614,11 +611,9 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
         refPrgListaCircular.mostrarInfo(
             this,
             "¿Qué es la Data Original?",
-            " \n La Data Original muestra todos los nodos que \n" +
-            " están actualmente en la lista enlazada \n" +
-            " antes de realizar la eliminación. \n\n" +
-            " Es la base de comparación para ver los \n" +
-            " cambios posteriores. \n",
+            "\nLa Data Original muestra la lista completa.\n" +
+            "Son los nodos antes de realizar eliminación.\n" +
+            "Es la base para comparar cambios posteriores.\n",
             "imagenes/data_original_eliminacion_lista.png");
     }//GEN-LAST:event_btnInfoDataOriginalElimActionPerformed
 
@@ -640,23 +635,28 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
         refPrgListaCircular.mostrarInfo(
             this,
             "¿Qué hace el botón MOSTRAR?",
-            " \n El botón MOSTRAR recorre la lista desde el inicio hasta el fin, \n" +
-            " y muestra los datos de cada nodo en el área de texto. \n\n" +
-            " Esto permite visualizar todos los empleados guardados \n" +
-            " en la lista.  \n",
-            "imagenes/mostrar_lista.png");
+            "El botón MOSTRAR recorre la lista circular desde el nodo\n" +
+            "'inicio' hasta volver a él.\n" +
+            "Gracias al enlace circular, se usa un bucle especial\n" +
+            "(do-while) que garantiza\n" +
+            "que todos los nodos se visiten al menos una vez.\n\n" +
+            "El resultado se muestra en el área de texto, con los\n" +
+            "datos de cada empleado.",
+            "imagenes/mostrar_lista_circular.png");
     }//GEN-LAST:event_btnInfoMostrarIngreActionPerformed
 
     private void btnInfoGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoGuardarActionPerformed
         refPrgListaCircular.mostrarInfo(
             this,
             "¿Qué hace el botón GUARDAR?",
-            " \n El botón GUARDAR crea un nuevo nodo con los datos ingresados \n" +
+            " El botón GUARDAR crea un nuevo nodo con los datos ingresados \n" +
             " en los campos de texto (Código, Nombre y Sueldo) y lo añade al \n" +
-            " final de la lista enlazada. \n\n" +
-            " Si la lista está vacía, el nuevo nodo se convierte en el inicio y el fin. \n" +
-            " Si ya hay nodos, se enlaza al último y se actualiza el puntero fin. \n ",
-            "imagenes/insertar_lista.png");
+            " final de la lista circular. \n\n" +
+            " Si la lista está vacía, el nuevo nodo se convierte en inicio y fin, \n" +
+            " y se enlaza consigo mismo. \n\n " +
+            " Si ya hay nodos, se enlaza al último y se actualiza el puntero fin, \n" +
+            " manteniendo el enlace circular (fin.sgte = inicio).",
+            "imagenes/guardar_lista_circular.png");
     }//GEN-LAST:event_btnInfoGuardarActionPerformed
 
     private void btnDataActualizadaIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataActualizadaIngreActionPerformed
@@ -664,7 +664,7 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
             this,
             "¿Qué es la Data Actualizada?",
             " \n La Data Actualizada muestra cómo queda la lista \n" +
-            " enlazada después de insertar un nuevo nodo. \n\n" +
+            " circular después de insertar un nuevo nodo. \n\n" +
             " Aquí se ve la secuencia de empleados incluyendo \n" +
             " al recién añadido al final. \n ",
             "imagenes/mostrar_lista.png");
@@ -676,8 +676,8 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
             "¿Qué es la Data a Guardar?",
             " \n La Data a Guardar muestra los datos que el usuario \n" +
             " ha ingresado en los campos de texto. \n\n" +
-            " Estos datos aún no están guardados en la lista enlazada \n" +
-            " simples, pero están listos para ser insertados. \n",
+            " Estos datos aún no están guardados en la lista \n" +
+            " circular, pero están listos para ser insertados. \n",
             "imagenes/data_a_guardar_lista.png");
     }//GEN-LAST:event_btnDataAGuardarIngreActionPerformed
 
@@ -686,7 +686,7 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
             this,
             "¿Qué es la Data Original?",
             " \n La Data Original muestra los registros que ya están \n" +
-            " guardados en la lista enlazada simple. \n\n" +
+            " guardados en la lista enlazada circular. \n\n" +
             " Cada nodo contiene un empleado con su código, \n" +
             " nombre y sueldo.\n\n " +
             " Esta información se carga al iniciar el programa.\n ",
@@ -696,38 +696,40 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
     private void btnInfoUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoUsoActionPerformed
         refPrgListaCircular.mostrarInfo(
             this,
-            "¿Por qué se usan las listas enlazadas simples?",
-            " Se usan porque permiten manejar datos de manera flexible. \n" +
-            " No requieren un tamaño fijo como los arreglos. \n\n" +
-            " Son útiles cuando se necesita insertar o eliminar elementos \n" +
-            " sin preocuparse por mover grandes bloques de memoria. \n\n" +
-            " Además, se adaptan mejor a situaciones dinámicas. ",
+            "¿Por qué se usan las listas circulares?",
+            "Se usan porque permiten recorrer los datos de manera continua.\n" +
+            "Son útiles en aplicaciones donde se necesita un ciclo repetitivo,\n" +
+            "como sistemas de turnos, juegos.\n\n" +
+            "Además, facilitan operaciones que requieren volver al inicio sin \n" +
+            "reiniciar el recorrido.",
             "");
     }//GEN-LAST:event_btnInfoUsoActionPerformed
 
-    private void btnInfoOrganizacionListaSimpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoOrganizacionListaSimpleActionPerformed
+    private void btnInfoOrganizacionListaCircularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoOrganizacionListaCircularActionPerformed
         refPrgListaCircular.mostrarInfo(
             this,
-            "¿Cómo se organiza una lista enlazada simple?",
-            " \n Cada nodo tiene dos partes: \n" +
-            " 1) Los datos del empleado (código, nombre, sueldo). \n" +
-            " 2) Una referencia al siguiente nodo. \n\n " +
-            " El primer nodo se llama 'inicio' y el último 'fin'. \n " +
-            " El último nodo apunta a null, indicando el final de la lista. \n",
-            "imagenes/estructura_nodo.png");
-    }//GEN-LAST:event_btnInfoOrganizacionListaSimpleActionPerformed
+            "¿Cómo se organiza una lista circular?",
+            "La lista circular tiene dos punteros anclas:\n" +
+            "- 'inicio': apunta al primer nodo.\n" +
+            "- 'fin': apunta al último nodo.\n\n" +
+            "La clave es que 'fin.sgte' apunta nuevamente a 'inicio'.\n" +
+            "Así, al recorrer la lista, después del último nodo se \n" +
+            "vuelve al primero. ",
+            "imagenes/lista_circular.png");
+    }//GEN-LAST:event_btnInfoOrganizacionListaCircularActionPerformed
 
-    private void btnInfoListaSimpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoListaSimpleActionPerformed
+    private void btnInfoListaCircularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoListaCircularActionPerformed
         refPrgListaCircular.mostrarInfo(
             this,
-            "¿Qué es una lista enlazada simple?",
-            " \n Una lista enlazada simple es una estructura dinámica de datos. \n" +
-            " Está formada por nodos, y cada nodo contiene información \n" +
-            " (ej. un empleado) y un puntero (sgte) al siguiente nodo. \n\n" +
-            " A diferencia de los arreglos, las listas no tienen tamaño fijo, \n" +
-            " pueden crecer o reducirse según se inserten o eliminen elementos. \n",
-            "imagenes/lista_simple.png");
-    }//GEN-LAST:event_btnInfoListaSimpleActionPerformed
+            "¿Qué es una lista circular?",
+            "Una lista circular es una variante de la lista enlazada.\n" +
+            "En ella, el último nodo no apunta a null, sino que se enlaza nuevamente\n" +
+            "con el primer nodo, formando un círculo.\n\n" +
+            "Esto permite recorrer la lista de manera continua, sin un final definido.\n" +
+            "Cada nodo contiene los datos (ej. código, nombre, sueldo) y una \n" +
+            "referencia al siguiente.",
+            "imagenes/lista_circular.png");
+    }//GEN-LAST:event_btnInfoListaCircularActionPerformed
 
     private void btnMostrarIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarIngreActionPerformed
         refPrgListaCircular.mostrar(txaIngre);
@@ -761,10 +763,10 @@ public class WinListaCircular extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnInfoDataOriginalIngre;
     private javax.swing.JButton btnInfoEliminar;
     private javax.swing.JButton btnInfoGuardar;
-    private javax.swing.JButton btnInfoListaSimple;
+    private javax.swing.JButton btnInfoListaCircular;
     private javax.swing.JButton btnInfoMostrarElim;
     private javax.swing.JButton btnInfoMostrarIngre;
-    private javax.swing.JButton btnInfoOrganizacionListaSimple;
+    private javax.swing.JButton btnInfoOrganizacionListaCircular;
     private javax.swing.JButton btnInfoUso;
     private javax.swing.JButton btnMostrarElim;
     private javax.swing.JButton btnMostrarIngre;
