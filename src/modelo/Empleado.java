@@ -7,9 +7,9 @@ package modelo;
  */
 public class Empleado 
 {
-    private int codigo;
-    private String nombre;
-    private float sueldo;
+    public int codigo;
+    public String nombre;
+    public float sueldo;
 
     public Empleado() {
     }

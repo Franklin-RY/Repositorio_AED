@@ -11,111 +11,117 @@ import modelo.NodoLD;
 
 public class PrgListaDoble
 {
-    NodoLD ini = null;
+    NodoLD inicio = null;
     NodoLD fin = null;
     NodoLD nuevo;
-    Empleado emple;
+    Empleado emp;
     
     public boolean estaVacia()
     {
-        return ini == null;
+        if (inicio == null)
+            return true;
+        else
+            return false;
     }
     
     public void agregar(int cod, String nom, float suel)
     {
-        emple = new Empleado(cod, nom, suel);
-        nuevo = new NodoLD(emple);
-        if (estaVacia()) 
+        emp = new Empleado(cod, nom, suel);
+        nuevo = new NodoLD(emp);
+        if(inicio==null)
         {
-            ini = fin = nuevo;
+            inicio = nuevo;
+        }    
+        else
+        {
+            nuevo.ant = fin;
+            fin.sgte = nuevo;
+        }      
+        fin = nuevo;
+    }
+    
+    public void listarIzqDer(JTextArea txa)
+    {
+        txa.setText("");
+        NodoLD aux = inicio;
+        while(aux!= null)
+        {
+            String data = aux.emp.getCodigo() + "\t" +                              
+                          aux.emp.getNombre() + "\t" +
+                          aux.emp.getSueldo() + "\n";
+            txa.append(data);
+            aux = aux.sgte;
         }
-        else 
+    }
+    
+    public void listarDerIzq(JTextArea txa)
+    {
+        txa.setText("");
+        NodoLD aux = fin;
+        while(aux!= null)
         {
-            // Enlazar el nuevo nodo al final de la lista
-            nuevo.ant = fin;      // El anterior del nuevo es el fin actual
-            fin.sgte = nuevo;     // El siguiente del fin actual es el nuevo
-            fin = nuevo;          // El nuevo nodo pasa a ser el fin
+            String data = aux.emp.getCodigo() + "\t" +                              
+                          aux.emp.getNombre() + "\t" +
+                          aux.emp.getSueldo() + "\n";
+            txa.append(data);
+            aux = aux.ant;
         }
     }
     
     public NodoLD buscarxCodigo(int cod)
     {
-        NodoLD p = ini;
+        NodoLD p = inicio;
         while (p!= null)
         {
-            if (p.emp.getCodigo() == cod)
+            if (p.emp.getCodigo() == cod) 
                 return p;
             p = p.sgte;
         }
         return null;
     }
-   
-    public void eliminarXCodigo(int cod)            
-    {
-        NodoLD p = buscarxCodigo(cod);
-        NodoLD back = getBack(p);
-        back.sgte= p.sgte;
-        p.sgte.ant = back;
-        //back.sgte.sgte.ant=back;
-        p.sgte=null;
-        p.ant = null;
-    }        
     
-    public void elimNodo1()
+    public void eliminarXcodigo(int cod) 
     {
-        if (estaVacia())
-        {
-            JOptionPane.showMessageDialog(null, "La lista está vacía");
-            return;
+        NodoLD b = buscarxCodigo(cod);
+        if (b != null) {
+            Empleado emple = b.emp;
+
+            if (b == inicio && b == fin) 
+            {
+                inicio = fin = null;
+            }
+            else 
+            {
+                if (b == inicio) 
+                {
+                    inicio = inicio.sgte;
+                    inicio.ant = null;
+                    b.sgte = null;
+                }
+                else 
+                {
+                    if (b == fin) 
+                    {
+                        fin = fin.ant;
+                        fin.sgte = null;
+                        b.ant = null;
+                    }                
+                    else 
+                    {
+                        b.ant.sgte = b.sgte;
+                        b.sgte.ant = b.ant;
+                        b.sgte = null;
+                        b.ant = null;
+                    }
+                }
+            }
+            JOptionPane.showMessageDialog(null, "El empleado " + emple.getNombre() + " ha sido eliminado");
+        } else {
+            JOptionPane.showMessageDialog(null,
+                "El empleado con código \"" + cod + "\" NO existe");
         }
-        
-        Empleado emple = ini.emp;
-        
-        // Si es el único nodo
-        if (ini == fin)
-        {
-            ini = fin = null;
-        }
-        // Si hay más nodos
-        else
-        {
-            NodoLD aux = ini;
-            ini = ini.sgte;
-            ini.ant = null;
-            aux.sgte = null;
-        }
-        
-        JOptionPane.showMessageDialog(null, 
-            "El empleado " + emple.getNombre() + " (primer nodo) ha sido eliminado");
-    }
-    
-    public NodoLD getBack(NodoLD p)
-    {       
-        NodoLD back = ini;
-        while(back.sgte!= p)
-            back = back.sgte;
-        return back;
     }
 
-    public void mostrar(JTextArea txa)
-    {
-        txa.setText("");
-        if (estaVacia())
-        {
-            txa.setText("La lista está vacía");
-            return;
-        }
-        NodoLD aux = ini;
-        while (aux != null)
-        {                
-            String data = aux.emp.getCodigo() + "\t" +                              
-                          aux.emp.getNombre() + "\t" +
-                          aux.emp.getSueldo() + "\n";
-            txa.append(data);
-            aux = aux.sgte;            
-        }        
-    }
-    
     public void inicializarListaDoble()
     {
         agregar(100, "Ana", 1000.0f);
@@ -129,11 +135,9 @@ public class PrgListaDoble
         JTextArea areaTexto = new JTextArea(mensaje);
         areaTexto.setFont(new Font("Arial", Font.PLAIN, 20));
         areaTexto.setEditable(false);
-        areaTexto.setLineWrap(true);
-        areaTexto.setWrapStyleWord(true);
 
         ImageIcon iconoOriginal = new ImageIcon(rutaImagen);
-        Image imagenEscalada = iconoOriginal.getImage().getScaledInstance(400, 250, Image.SCALE_SMOOTH);
+        Image imagenEscalada = iconoOriginal.getImage().getScaledInstance(400, 200, Image.SCALE_SMOOTH);
         ImageIcon iconoEscalado = new ImageIcon(imagenEscalada);
 
         JOptionPane.showMessageDialog(
@@ -144,87 +148,4 @@ public class PrgListaDoble
             iconoEscalado
         );
     }
-    
-    public String listarIzqDer()
-    {
-        String datos = "";
-        if (estaVacia())
-        {
-            return "La lista está vacía";
-        }
-        
-        datos = "CÓDIGO\tNOMBRE\t\tSUELDO\n";
-        datos += "======\t======\t\t======\n";
-        
-        NodoLD aux = ini;
-        while (aux != null)
-        {
-            datos = datos + aux.emp.getCodigo() + "\t" + 
-                            aux.emp.getNombre() + "\t\t" + 
-                            aux.emp.getSueldo() + "\n";
-            aux = aux.sgte;
-        }
-        return datos;
-    }
-    
-    public String listarDerIzq()
-    {
-        String datos = "";
-        if (estaVacia())
-        {
-            return "La lista está vacía";
-        }
-        
-        datos = "CÓDIGO\tNOMBRE\t\tSUELDO\n";
-        datos += "======\t======\t\t======\n";
-        
-        NodoLD aux = fin;
-        while (aux != null)
-        {
-            datos = datos + aux.emp.getCodigo() + "\t" + 
-                            aux.emp.getNombre() + "\t\t" + 
-                            aux.emp.getSueldo() + "\n";
-            aux = aux.ant;
-        }
-        return datos;
-    }
-    
-    public void mostrarReverso(JTextArea txa)
-    {
-        txa.setText("=== RECORRIDO DE DERECHA A IZQUIERDA ===\n\n");
-        txa.append(listarDerIzq());
-    }
-
-    public NodoLD getIni() {
-        return ini;
-    }
-
-    public void setIni(NodoLD ini) {
-        this.ini = ini;
-    }
-
-    public NodoLD getFin() {
-        return fin;
-    }
-
-    public void setFin(NodoLD fin) {
-        this.fin = fin;
-    }
-
-    public NodoLD getNuevo() {
-        return nuevo;
-    }
-
-    public void setNuevo(NodoLD nuevo) {
-        this.nuevo = nuevo;
-    }
-
-    public Empleado getEmple() {
-        return emple;
-    }
-
-    public void setEmple(Empleado emple) {
-        this.emple = emple;
-    }
-    
 }

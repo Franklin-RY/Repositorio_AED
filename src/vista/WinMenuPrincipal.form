@@ -122,6 +122,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cola"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuItColaActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -146,6 +149,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Arbol Binario de Busqueda"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuItArbolBinarioBusquedaActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

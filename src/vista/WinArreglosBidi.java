@@ -42,15 +42,10 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         tablaActualizadaIngre = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         btnMostrarIngre = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
         btnInfoArregloBidimensional = new javax.swing.JButton();
         btnInfoUso = new javax.swing.JButton();
-        btnDataAGuardarIngre = new javax.swing.JButton();
         btnDataActualizadaIngre = new javax.swing.JButton();
         btnInfoGuardar = new javax.swing.JButton();
         btnInfoMostrarIngre = new javax.swing.JButton();
@@ -63,13 +58,8 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
         btnEliminar = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         tablaActualizadaElim = new javax.swing.JTable();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         btnMostrarElim = new javax.swing.JButton();
         jLabel27 = new javax.swing.JLabel();
-        btnDataAEliminar = new javax.swing.JButton();
         btnDataActualizadaElim = new javax.swing.JButton();
         btnInfoEliminar = new javax.swing.JButton();
         btnInfoMostrarElim = new javax.swing.JButton();
@@ -181,42 +171,6 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel7.setText("Nota 1:     16.0");
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel8.setText("Nota 2:     16.0");
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel9.setText("Nota 3:     16.0");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         btnMostrarIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnMostrarIngre.setText("MOSTRAR");
         btnMostrarIngre.addActionListener(new java.awt.event.ActionListener() {
@@ -242,14 +196,6 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
         btnInfoUso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInfoUsoActionPerformed(evt);
-            }
-        });
-
-        btnDataAGuardarIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnDataAGuardarIngre.setText("Data a guardar");
-        btnDataAGuardarIngre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDataAGuardarIngreActionPerformed(evt);
             }
         });
 
@@ -309,18 +255,6 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
                         .addGap(197, 197, 197)
                         .addComponent(jLabel26))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDataAGuardarIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnDataOriginalIngre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDataActualizadaIngre))
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(186, 186, 186)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -346,7 +280,15 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnInfoOrganizacionArregloBidi)
                         .addGap(18, 18, 18)
-                        .addComponent(btnInfoUso)))
+                        .addComponent(btnInfoUso))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(302, 302, 302)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btnDataOriginalIngre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnDataActualizadaIngre))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -382,16 +324,13 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnMostrarIngre)
                             .addComponent(btnInfoMostrarIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(28, 28, 28)
+                .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDataAGuardarIngre)
                     .addComponent(btnDataActualizadaIngre)
                     .addComponent(btnDataOriginalIngre))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel6)
                 .addContainerGap())
         );
@@ -484,41 +423,6 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
         tablaActualizadaElim.setRowHeight(30);
         jScrollPane4.setViewportView(tablaActualizadaElim);
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel16.setText("Nota 1:     18");
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel17.setText("Nota 2:     18");
-
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel18.setText("Nota 3:     18");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel16))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel16)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel17)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel18)
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
-
         btnMostrarElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnMostrarElim.setText("MOSTRAR");
         btnMostrarElim.addActionListener(new java.awt.event.ActionListener() {
@@ -530,14 +434,6 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
         jLabel27.setFont(new java.awt.Font("Stencil", 1, 36)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(153, 0, 0));
         jLabel27.setText("ARREGLOS BIDIMENSIONALES");
-
-        btnDataAEliminar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnDataAEliminar.setText("Data a Eliminar ");
-        btnDataAEliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDataAEliminarActionPerformed(evt);
-            }
-        });
 
         btnDataActualizadaElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnDataActualizadaElim.setText("Data Actualizada ");
@@ -598,18 +494,14 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
                         .addGap(207, 207, 207)
                         .addComponent(jLabel27))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(163, 163, 163)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDataAEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGap(322, 322, 322)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(btnDataOriginalElim, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnDataActualizadaElim)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -630,13 +522,10 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
                     .addComponent(btnInfoMostrarElim, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDataAEliminar)
-                    .addComponent(btnDataActualizadaElim)
-                    .addComponent(btnDataOriginalElim))
+                    .addComponent(btnDataOriginalElim)
+                    .addComponent(btnDataActualizadaElim))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
@@ -693,16 +582,6 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
             "imagenes/mostrar_eliminacion_notas.png");
     }//GEN-LAST:event_btnDataActualizadaElimActionPerformed
 
-    private void btnDataAEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataAEliminarActionPerformed
-        refPrgArreglosBidi.mostrarInfo(
-            this,
-            "¿Qué es la Data a Eliminar?",
-            " \n\n La Data a Eliminar muestra las \n" +
-            " tres notas del estudiante que \n" +
-            " será eliminado. \n\n",
-            "imagenes/data_a_eliminar_notas.png");
-    }//GEN-LAST:event_btnDataAEliminarActionPerformed
-
     private void btnMostrarElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarElimActionPerformed
         refPrgArreglosBidi.mostrarDatos(tablaActualizadaElim);
     }//GEN-LAST:event_btnMostrarElimActionPerformed
@@ -752,18 +631,6 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
             " añadido al final. \n",
             "imagenes/data_actualizada_notas.png");
     }//GEN-LAST:event_btnDataActualizadaIngreActionPerformed
-
-    private void btnDataAGuardarIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataAGuardarIngreActionPerformed
-        refPrgArreglosBidi.mostrarInfo(
-            this,
-            "¿Qué es la Data a Guardar?",
-            " \n La Data a Guardar muestra las tres notas que el \n" +
-            " usuario ha ingresado en los campos de texto. \n\n" +
-            " Estos datos aún no están guardados en el \n" +
-            " arreglo bidimensional, pero están listos \n" +
-            " para ser insertados.  \n",
-            "imagenes/data_a_guardar_notas.png");
-    }//GEN-LAST:event_btnDataAGuardarIngreActionPerformed
 
     private void btnInfoUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoUsoActionPerformed
         refPrgArreglosBidi.mostrarInfo(
@@ -861,8 +728,6 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnDataAEliminar;
-    private javax.swing.JButton btnDataAGuardarIngre;
     private javax.swing.JButton btnDataActualizadaElim;
     private javax.swing.JButton btnDataActualizadaIngre;
     private javax.swing.JButton btnDataOriginalElim;
@@ -880,21 +745,13 @@ public class WinArreglosBidi extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnMostrarIngre;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;

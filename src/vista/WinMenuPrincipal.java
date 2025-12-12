@@ -13,6 +13,8 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
     WinListaDoble refWinListaDoble;
     WinListaCircular refWinListaCircular;
     WinPila refWinPila;
+    WinCola refWinCola;
+    WinArbolBusqueda refWinArbolBusqueda;
     
     public WinMenuPrincipal() {
         initComponents();
@@ -22,6 +24,8 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         refWinListaDoble = new WinListaDoble();
         refWinListaCircular = new WinListaCircular();
         refWinPila = new WinPila();
+        refWinCola = new WinCola();
+        refWinArbolBusqueda = new WinArbolBusqueda();
     }
 
     @SuppressWarnings("unchecked")
@@ -131,6 +135,11 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
 
         menuItCola.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         menuItCola.setText("Cola");
+        menuItCola.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItColaActionPerformed(evt);
+            }
+        });
         jMenu1.add(menuItCola);
 
         jMenuBar1.add(jMenu1);
@@ -142,6 +151,11 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
 
         menuItArbolBinarioBusqueda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         menuItArbolBinarioBusqueda.setText("Arbol Binario de Busqueda");
+        menuItArbolBinarioBusqueda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItArbolBinarioBusquedaActionPerformed(evt);
+            }
+        });
         jMenu3.add(menuItArbolBinarioBusqueda);
 
         jMenuBar1.add(jMenu3);
@@ -191,6 +205,16 @@ public class WinMenuPrincipal extends javax.swing.JFrame {
         escritorio.add(refWinPila);
         refWinPila.setVisible(true);
     }//GEN-LAST:event_menuItPilaActionPerformed
+
+    private void menuItColaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItColaActionPerformed
+        escritorio.add(refWinCola);
+        refWinCola.setVisible(true);
+    }//GEN-LAST:event_menuItColaActionPerformed
+
+    private void menuItArbolBinarioBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItArbolBinarioBusquedaActionPerformed
+        escritorio.add(refWinArbolBusqueda);
+        refWinArbolBusqueda.setVisible(true);
+    }//GEN-LAST:event_menuItArbolBinarioBusquedaActionPerformed
 
     /**
      * @param args the command line arguments

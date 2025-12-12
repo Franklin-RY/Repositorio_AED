@@ -141,7 +141,7 @@ public class PrgListaCircular
         }
     }
     
-    public void inicializarListaSimple(){
+    public void inicializarListaCircular(){
         insertar(100, "Ana", 1000.0f);
         insertar(200, "Beatriz", 2000.0f);
         insertar(300, "Cesar", 3000.0f);

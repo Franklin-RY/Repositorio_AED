@@ -17,8 +17,8 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
         refPrgListaDoble = new PrgListaDoble();
         
         refPrgListaDoble.inicializarListaDoble();
-        refPrgListaDoble.mostrar(txaIngre);
-        refPrgListaDoble.mostrar(txaElim);
+        refPrgListaDoble.listarIzqDer(txaIngre);
+        refPrgListaDoble.listarIzqDer(txaElim);
     }
 
     @SuppressWarnings("unchecked")
@@ -34,23 +34,19 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
         txtSueIngre = new javax.swing.JTextField();
         btnGuardarIngre = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        btnMostrarIngre = new javax.swing.JButton();
+        btnMostrarIngreIzqDer = new javax.swing.JButton();
         txtNomIngre = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
         btnInfoListaSimple = new javax.swing.JButton();
         btnInfoOrganizacionListaSimple = new javax.swing.JButton();
-        btnInfoUso = new javax.swing.JButton();
         btnInfoDataOriginalIngre = new javax.swing.JButton();
-        btnDataAGuardarIngre = new javax.swing.JButton();
         btnDataActualizadaIngre = new javax.swing.JButton();
         btnInfoGuardar = new javax.swing.JButton();
-        btnInfoMostrarIngre = new javax.swing.JButton();
+        btnInfoMostrarIzqDer = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txaIngre = new javax.swing.JTextArea();
+        btnMostrarIngreDerIzq = new javax.swing.JButton();
+        btnInfoMostrarDerIzq = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -59,21 +55,16 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
         txtNomElim = new javax.swing.JTextField();
         txtSueElim = new javax.swing.JTextField();
         btnEliminar = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        btnMostrarElim = new javax.swing.JButton();
         jLabel27 = new javax.swing.JLabel();
         btnInfoDataOriginalElim = new javax.swing.JButton();
-        btnDataAEliminar = new javax.swing.JButton();
         btnDataActualizadaElim = new javax.swing.JButton();
         btnInfoEliminar = new javax.swing.JButton();
-        btnInfoMostrarElim = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         txaElim = new javax.swing.JTextArea();
-        btnEliminarNodo1 = new javax.swing.JButton();
-        btnInfoEliminarNodo1 = new javax.swing.JButton();
+        btnMostrarIzqDerElim = new javax.swing.JButton();
+        btnMostrarDerIzqElim = new javax.swing.JButton();
+        btnInfoMostrarDerIzqElim = new javax.swing.JButton();
+        btnInfoMostrarIzqDerElim = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -84,12 +75,15 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Codigo: ");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nombre:");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Sueldo:");
 
         txtCodIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -108,46 +102,11 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel7.setText("Código:       500");
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel8.setText("Nombre:     Esther");
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel9.setText("Sueldo:        5000.00");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel9)
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
-
-        btnMostrarIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnMostrarIngre.setText("MOSTRAR");
-        btnMostrarIngre.addActionListener(new java.awt.event.ActionListener() {
+        btnMostrarIngreIzqDer.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnMostrarIngreIzqDer.setText("MOSTRAR DE IZQUIERDA A DERECHA");
+        btnMostrarIngreIzqDer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMostrarIngreActionPerformed(evt);
+                btnMostrarIngreIzqDerActionPerformed(evt);
             }
         });
 
@@ -174,27 +133,11 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
             }
         });
 
-        btnInfoUso.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnInfoUso.setText("USO");
-        btnInfoUso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInfoUsoActionPerformed(evt);
-            }
-        });
-
         btnInfoDataOriginalIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnInfoDataOriginalIngre.setText("Data Original");
         btnInfoDataOriginalIngre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInfoDataOriginalIngreActionPerformed(evt);
-            }
-        });
-
-        btnDataAGuardarIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnDataAGuardarIngre.setText("Data a guardar");
-        btnDataAGuardarIngre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDataAGuardarIngreActionPerformed(evt);
             }
         });
 
@@ -214,11 +157,11 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
             }
         });
 
-        btnInfoMostrarIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnInfoMostrarIngre.setText("¿Qué hace el botón MOSTRAR?");
-        btnInfoMostrarIngre.addActionListener(new java.awt.event.ActionListener() {
+        btnInfoMostrarIzqDer.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoMostrarIzqDer.setText("¿Qué hace el botón MOSTRAR I-D?");
+        btnInfoMostrarIzqDer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInfoMostrarIngreActionPerformed(evt);
+                btnInfoMostrarIzqDerActionPerformed(evt);
             }
         });
 
@@ -226,6 +169,22 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
         txaIngre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         txaIngre.setRows(5);
         jScrollPane1.setViewportView(txaIngre);
+
+        btnMostrarIngreDerIzq.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnMostrarIngreDerIzq.setText("MOSTRAR DE DERECHA A IZQUIERDA");
+        btnMostrarIngreDerIzq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarIngreDerIzqActionPerformed(evt);
+            }
+        });
+
+        btnInfoMostrarDerIzq.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoMostrarDerIzq.setText("¿Qué hace el botón MOSTRAR D-I?");
+        btnInfoMostrarDerIzq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoMostrarDerIzqActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -237,97 +196,78 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
                         .addGap(726, 726, 726)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
+                        .addGap(49, 49, 49)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnInfoListaSimple)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnInfoOrganizacionListaSimple)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnInfoUso, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(btnDataAGuardarIngre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(btnInfoDataOriginalIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(btnDataActualizadaIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jScrollPane1)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(txtCodIngre, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtSueIngre)
-                                            .addComponent(txtNomIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(13, 13, 13)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(btnGuardarIngre)
-                                            .addComponent(btnMostrarIngre))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnInfoGuardar)
-                                            .addComponent(btnInfoMostrarIngre)))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGap(135, 135, 135)
-                                .addComponent(jLabel26)))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtNomIngre)
+                                    .addComponent(txtCodIngre)
+                                    .addComponent(txtSueIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnMostrarIngreIzqDer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnMostrarIngreDerIzq, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnGuardarIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(btnInfoDataOriginalIngre)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnDataActualizadaIngre))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnInfoMostrarIzqDer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnInfoMostrarDerIzq, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnInfoGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(btnInfoListaSimple, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnInfoOrganizacionListaSimple))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(173, 173, 173)
+                        .addComponent(jLabel26)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnInfoListaSimple, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInfoOrganizacionListaSimple))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnInfoListaSimple)
-                    .addComponent(btnInfoOrganizacionListaSimple)
-                    .addComponent(btnInfoUso))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(txtCodIngre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtNomIngre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(txtSueIngre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnGuardarIngre)
-                            .addComponent(btnInfoGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(40, 40, 40)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnMostrarIngre)
-                            .addComponent(btnInfoMostrarIngre, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jLabel1)
+                    .addComponent(txtCodIngre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGuardarIngre)
+                    .addComponent(btnInfoGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnInfoDataOriginalIngre)
-                            .addComponent(btnDataAGuardarIngre))
-                        .addGap(6, 6, 6))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnDataActualizadaIngre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
-                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtNomIngre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMostrarIngreIzqDer)
+                    .addComponent(btnInfoMostrarIzqDer, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtSueIngre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMostrarIngreDerIzq)
+                    .addComponent(btnInfoMostrarDerIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnInfoDataOriginalIngre)
+                    .addComponent(btnDataActualizadaIngre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel6)
                 .addContainerGap())
         );
@@ -337,70 +277,31 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 158, 158));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Codigo: ");
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Nombre:");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Sueldo:");
 
         txtCodElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         txtCodElim.setText("100");
 
         txtNomElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtNomElim.setText("Ana");
 
         txtSueElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtSueElim.setText("1000");
 
         btnEliminar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnEliminar.setText("ELIMINAR");
+        btnEliminar.setText("ELIMINAR POR CÓDIGO");
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
-            }
-        });
-
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel16.setText("Código:       100");
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel17.setText("Nombre:     Ana");
-
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel18.setText("Sueldo:       1000.0");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE))
-                    .addComponent(jLabel18))
-                .addContainerGap(45, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel16)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel17)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel18)
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-
-        btnMostrarElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnMostrarElim.setText("MOSTRAR");
-        btnMostrarElim.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMostrarElimActionPerformed(evt);
             }
         });
 
@@ -413,14 +314,6 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
         btnInfoDataOriginalElim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInfoDataOriginalElimActionPerformed(evt);
-            }
-        });
-
-        btnDataAEliminar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnDataAEliminar.setText("Data a Eliminar ");
-        btnDataAEliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDataAEliminarActionPerformed(evt);
             }
         });
 
@@ -440,32 +333,40 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
             }
         });
 
-        btnInfoMostrarElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnInfoMostrarElim.setText("¿Qué hace el botón MOSTRAR?");
-        btnInfoMostrarElim.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInfoMostrarElimActionPerformed(evt);
-            }
-        });
-
         txaElim.setColumns(20);
         txaElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         txaElim.setRows(5);
         jScrollPane2.setViewportView(txaElim);
 
-        btnEliminarNodo1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnEliminarNodo1.setText("ELIMINA NODO 1");
-        btnEliminarNodo1.addActionListener(new java.awt.event.ActionListener() {
+        btnMostrarIzqDerElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnMostrarIzqDerElim.setText("MOSTRAR DE IZQUIERDA A DERECHA");
+        btnMostrarIzqDerElim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarNodo1ActionPerformed(evt);
+                btnMostrarIzqDerElimActionPerformed(evt);
             }
         });
 
-        btnInfoEliminarNodo1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnInfoEliminarNodo1.setText("¿Qué hace el boton ELIM.NODO 1?");
-        btnInfoEliminarNodo1.addActionListener(new java.awt.event.ActionListener() {
+        btnMostrarDerIzqElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnMostrarDerIzqElim.setText("MOSTRAR DE DERECHA A IZQUIERDA");
+        btnMostrarDerIzqElim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInfoEliminarNodo1ActionPerformed(evt);
+                btnMostrarDerIzqElimActionPerformed(evt);
+            }
+        });
+
+        btnInfoMostrarDerIzqElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoMostrarDerIzqElim.setText("¿Qué hace el botón MOSTRAR D-I?");
+        btnInfoMostrarDerIzqElim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoMostrarDerIzqElimActionPerformed(evt);
+            }
+        });
+
+        btnInfoMostrarIzqDerElim.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnInfoMostrarIzqDerElim.setText("¿Qué hace el botón MOSTRAR I-D?");
+        btnInfoMostrarIzqDerElim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoMostrarIzqDerElimActionPerformed(evt);
             }
         });
 
@@ -476,78 +377,69 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnDataAEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtNomElim)
-                            .addComponent(txtCodElim)
-                            .addComponent(txtSueElim)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(btnInfoDataOriginalElim, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(60, 60, 60)
-                                .addComponent(btnDataActualizadaElim, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(177, 177, 177)
+                        .addComponent(jLabel27))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(btnInfoDataOriginalElim)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnDataActualizadaElim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnEliminarNodo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnMostrarElim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnInfoEliminarNodo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(161, 161, 161)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnInfoEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnInfoMostrarElim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jScrollPane2))
-                        .addGap(119, 119, 119))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(217, 217, 217)
-                        .addComponent(jLabel27)))
-                .addContainerGap())
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtSueElim, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtNomElim, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtCodElim, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnMostrarIzqDerElim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnMostrarDerIzqElim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnInfoMostrarIzqDerElim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnInfoMostrarDerIzqElim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnInfoEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(txtCodElim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEliminar)
                     .addComponent(btnInfoEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(19, 19, 19)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(txtNomElim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMostrarElim)
-                    .addComponent(btnInfoMostrarElim, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnMostrarIzqDerElim)
+                    .addComponent(btnInfoMostrarIzqDerElim, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(txtSueElim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEliminarNodo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnInfoEliminarNodo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(42, 42, 42)
+                    .addComponent(btnMostrarDerIzqElim)
+                    .addComponent(btnInfoMostrarDerIzqElim, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnInfoDataOriginalElim)
-                    .addComponent(btnDataAEliminar)
                     .addComponent(btnDataActualizadaElim))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2))
-                .addGap(36, 36, 36))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         txtNomElim.setEnabled(false);
@@ -569,31 +461,21 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnInfoMostrarElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoMostrarElimActionPerformed
-        refPrgListaDoble.mostrarInfo(
-            this,
-            " ¿Qué hace el botón MOSTRAR en Eliminación?",
-            "\n El botón MOSTRAR recorre la lista enlazada desde el \n" +
-            " inicio hasta el fin y actualiza el área de texto \n" +
-            " con los datos actuales de cada nodo. \n\n" +
-            " Después de eliminar un nodo, este botón permite \n" +
-            " visualizar cómo quedó la lista reorganizada. \n",
-            "imagenes/mostrar_eliminacion_lista.png");
-    }//GEN-LAST:event_btnInfoMostrarElimActionPerformed
-
     private void btnInfoEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoEliminarActionPerformed
         refPrgListaDoble.mostrarInfo(
             this,
             "¿Qué hace el botón ELIMINAR?",
-            " El botón ELIMINAR busca el nodo que contiene el código \n" +
-            " ingresado por el usuario. \n" +
-            " Si lo encuentra, elimina ese nodo de la lista enlazada simple. \n\n" +
-            " La lista se reorganiza automáticamente: \n" +
-            " - Si es el primer nodo, se actualiza el inicio. \n" +
-            " - Si es el último, se actualiza el fin. \n" +
-            " - Si está en medio, se enlazan los nodos anterior y siguiente. \n\n" +
-            " Así se mantiene la continuidad de la lista sin dejar huecos. ",
-            "imagenes/eliminar_lista.png");
+            "El botón ELIMINAR busca un nodo por su código\n" +
+            "Si lo encuentra, lo desconecta de la lista doble\n" +
+            "Si es el único nodo, la lista queda vacía\n" +
+            "Si es el primero, se actualiza el inicio y se\n" +
+            "elimina el enlace hacia atrás\n" +
+            "Si es el último, se actualiza el fin y se elimina\n" +
+            "el enlace hacia adelante\n" +
+            "Si está en medio, se conectan sus vecinos y se\n" +
+            "limpian sus referencias sgte y ant\n" +
+            "Se muestra un mensaje confirmando la eliminación",
+            "imagenes/eliminar_lista_doble.png");
     }//GEN-LAST:event_btnInfoEliminarActionPerformed
 
     private void btnDataActualizadaElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataActualizadaElimActionPerformed
@@ -608,17 +490,6 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
             "imagenes/mostrar_eliminacion_lista.png");
     }//GEN-LAST:event_btnDataActualizadaElimActionPerformed
 
-    private void btnDataAEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataAEliminarActionPerformed
-        refPrgListaDoble.mostrarInfo(
-            this,
-            "¿Qué es la Data a Eliminar?",
-            " \n La Data a Eliminar muestra los datos del \n" +
-            " nodo que será eliminado. \n\n" +
-            " Este empleado se identifica por su código \n" +
-            " y se muestra antes de ser removido. \n",
-            "imagenes/data_a_eliminar_lista.png");
-    }//GEN-LAST:event_btnDataAEliminarActionPerformed
-
     private void btnInfoDataOriginalElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoDataOriginalElimActionPerformed
         refPrgListaDoble.mostrarInfo(
             this,
@@ -631,130 +502,103 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
             "imagenes/data_original_eliminacion_lista.png");
     }//GEN-LAST:event_btnInfoDataOriginalElimActionPerformed
 
-    private void btnMostrarElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarElimActionPerformed
-        refPrgListaDoble.mostrar(txaElim);
-    }//GEN-LAST:event_btnMostrarElimActionPerformed
-
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         int cod = Integer.parseInt(txtCodElim.getText());
+        refPrgListaDoble.eliminarXcodigo(cod);
         
-        int opcion = JOptionPane.showConfirmDialog(null,
-                "¿Estás seguro de eliminar el Nodo?",
-                "Confirmar",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.WARNING_MESSAGE
-        );
-        
-        if (opcion == JOptionPane.YES_OPTION)
-        {
-        refPrgListaDoble.eliminarXCodigo(cod);
-        txaElim.append(refPrgListaDoble.listarIzqDer());
-        }
-
         txtCodElim.setText("");
+        txtNomElim.setText("");
+        txtSueElim.setText("");
         txtCodElim.requestFocus();
-
-        refPrgListaDoble.mostrar(txaIngre);
         
-        
+        refPrgListaDoble.listarIzqDer(txaIngre);
     }//GEN-LAST:event_btnEliminarActionPerformed
 
-    private void btnInfoMostrarIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoMostrarIngreActionPerformed
+    private void btnInfoMostrarIzqDerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoMostrarIzqDerActionPerformed
         refPrgListaDoble.mostrarInfo(
             this,
-            "¿Qué hace el botón MOSTRAR?",
-            " \n El botón MOSTRAR recorre la lista desde el inicio hasta el fin, \n" +
-            " y muestra los datos de cada nodo en el área de texto. \n\n" +
-            " Esto permite visualizar todos los empleados guardados \n" +
-            " en la lista.  \n",
+            "¿Qué hace el botón MOSTRAR I-D?",
+            "Este botón recorre la lista desde el primer nodo\n" +
+            "hasta el último, usando el puntero 'sgte'\n" +
+            "Muestra cada empleado en orden de ingreso\n" +
+            "El recorrido se realiza de izquierda a derecha\n" +
+            "y se imprime en el área de texto\n" +
+            "Sirve para verificar cómo se organizan los nodos\n" +
+            "y confirmar que los datos se guardaron correctamente\n",
             "imagenes/mostrar_lista.png");
-    }//GEN-LAST:event_btnInfoMostrarIngreActionPerformed
+    }//GEN-LAST:event_btnInfoMostrarIzqDerActionPerformed
 
     private void btnInfoGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoGuardarActionPerformed
         refPrgListaDoble.mostrarInfo(
             this,
             "¿Qué hace el botón GUARDAR?",
-            " \n El botón GUARDAR crea un nuevo nodo con los datos ingresados \n" +
-            " en los campos de texto (Código, Nombre y Sueldo) y lo añade al \n" +
-            " final de la lista enlazada. \n\n" +
-            " Si la lista está vacía, el nuevo nodo se convierte en el inicio y el fin. \n" +
-            " Si ya hay nodos, se enlaza al último y se actualiza el puntero fin. \n ",
-            "imagenes/insertar_lista.png");
+            "El botón GUARDAR crea un nuevo nodo en la lista doble\n" +
+            "con los datos ingresados: código, nombre y sueldo\n" +
+            "El nodo se conecta al final de la lista existente\n" +
+            "Si la lista está vacía, el nodo se convierte en el\n" +
+            "primer y último elemento al mismo tiempo\n" +
+            "Cada nodo guarda un objeto Empleado con sus datos\n" +
+            "y se enlaza con punteros 'sgte' y 'ant' para recorrer\n" +
+            "en ambos sentidos según se necesite",
+            "imagenes/guardar_lista_doble.png");
     }//GEN-LAST:event_btnInfoGuardarActionPerformed
 
     private void btnDataActualizadaIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataActualizadaIngreActionPerformed
         refPrgListaDoble.mostrarInfo(
             this,
-            "¿Qué es la Data Actualizada?",
-            " \n La Data Actualizada muestra cómo queda la lista \n" +
-            " enlazada después de insertar un nuevo nodo. \n\n" +
-            " Aquí se ve la secuencia de empleados incluyendo \n" +
-            " al recién añadido al final. \n ",
+            "¿Qué es la DATA ACTUALIZADA?",
+            "\nLa Data Actualizada muestra el estado final de la lista\n" +
+            "después de realizar de insertar un nodo al final.\n" +
+            "Permite comparar con la Data Original para verificar\n" +
+            "que se insertó correctamente\n",
             "imagenes/mostrar_lista.png");
     }//GEN-LAST:event_btnDataActualizadaIngreActionPerformed
-
-    private void btnDataAGuardarIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataAGuardarIngreActionPerformed
-        refPrgListaDoble.mostrarInfo(
-            this,
-            "¿Qué es la Data a Guardar?",
-            " \n La Data a Guardar muestra los datos que el usuario \n" +
-            " ha ingresado en los campos de texto. \n\n" +
-            " Estos datos aún no están guardados en la lista enlazada \n" +
-            " simples, pero están listos para ser insertados. \n",
-            "imagenes/data_a_guardar_lista.png");
-    }//GEN-LAST:event_btnDataAGuardarIngreActionPerformed
 
     private void btnInfoDataOriginalIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoDataOriginalIngreActionPerformed
         refPrgListaDoble.mostrarInfo(
             this,
-            "¿Qué es la Data Original?",
-            " \n La Data Original muestra los registros que ya están \n" +
-            " guardados en la lista enlazada simple. \n\n" +
-            " Cada nodo contiene un empleado con su código, \n" +
-            " nombre y sueldo.\n\n " +
-            " Esta información se carga al iniciar el programa.\n ",
+            "¿Qué es la DATA ORIGINAL?",
+            "\nLa Data Original muestra los nodos actuales de la lista\n" +
+            "antes de realizar cualquier eliminación o modificación\n" +
+            "Se genera al presionar MOSTRAR I-D o D-I\n" +
+            "y refleja el estado completo de la lista en ese momento\n" +
+            "Sirve como referencia para comparar con la Data Actualizada\n",
             "imagenes/data_original_lista.png");
     }//GEN-LAST:event_btnInfoDataOriginalIngreActionPerformed
-
-    private void btnInfoUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoUsoActionPerformed
-        refPrgListaDoble.mostrarInfo(
-            this,
-            "¿Por qué se usan las listas enlazadas simples?",
-            " Se usan porque permiten manejar datos de manera flexible. \n" +
-            " No requieren un tamaño fijo como los arreglos. \n\n" +
-            " Son útiles cuando se necesita insertar o eliminar elementos \n" +
-            " sin preocuparse por mover grandes bloques de memoria. \n\n" +
-            " Además, se adaptan mejor a situaciones dinámicas. ",
-            "");
-    }//GEN-LAST:event_btnInfoUsoActionPerformed
 
     private void btnInfoOrganizacionListaSimpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoOrganizacionListaSimpleActionPerformed
         refPrgListaDoble.mostrarInfo(
             this,
-            "¿Cómo se organiza una lista enlazada simple?",
-            " \n Cada nodo tiene dos partes: \n" +
-            " 1) Los datos del empleado (código, nombre, sueldo). \n" +
-            " 2) Una referencia al siguiente nodo. \n\n " +
-            " El primer nodo se llama 'inicio' y el último 'fin'. \n " +
-            " El último nodo apunta a null, indicando el final de la lista. \n",
-            "imagenes/estructura_nodo.png");
+            "¿Cómo se organiza una lista doblemente enlazada?",
+            "La lista mantiene dos referencias principales:\n" +
+            "ini apunta al primer nodo y fin al último nodo\n" +
+            "Primer nodo: ini.ant siempre es null\n" +
+            "Último nodo: fin.sgte siempre es null\n" +
+            "Cada inserción al final actualiza fin.sgte=nuevo y\n" +
+            "nuevo.ant=fin, luego fin=nuevo\n" +
+            "Si la lista está vacía, ini y fin apuntan al mismo\n" +
+            "nuevo nodo tras la primera inserción",
+            "imagenes/Lista_Doble_Estructura.png");
     }//GEN-LAST:event_btnInfoOrganizacionListaSimpleActionPerformed
 
     private void btnInfoListaSimpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoListaSimpleActionPerformed
         refPrgListaDoble.mostrarInfo(
             this,
-            "¿Qué es una lista enlazada simple?",
-            " \n Una lista enlazada simple es una estructura dinámica de datos. \n" +
-            " Está formada por nodos, y cada nodo contiene información \n" +
-            " (ej. un empleado) y un puntero (sgte) al siguiente nodo. \n\n" +
-            " A diferencia de los arreglos, las listas no tienen tamaño fijo, \n" +
-            " pueden crecer o reducirse según se inserten o eliminen elementos. \n",
-            "imagenes/lista_simple.png");
+            "Teoría sobre lista doble",
+            "Una lista doblemente enlazada es una estructura\n" +
+            "lineal de nodos donde cada nodo conoce a su\n" +
+            "siguiente (sgte) y a su anterior (ant)\n" +
+            "Permite recorridos en ambos sentidos y elimina\n" +
+            "la necesidad de buscar el anterior durante\n" +
+            "operaciones como eliminación o inserción intermedia\n" +
+            "Cada nodo encapsula un objeto (Empleado) y\n" +
+            "punteros ant y sgte para mantener los enlaces",
+            "imagenes/lista_doble.png");
     }//GEN-LAST:event_btnInfoListaSimpleActionPerformed
 
-    private void btnMostrarIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarIngreActionPerformed
-        refPrgListaDoble.mostrar(txaIngre);
-    }//GEN-LAST:event_btnMostrarIngreActionPerformed
+    private void btnMostrarIngreIzqDerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarIngreIzqDerActionPerformed
+        refPrgListaDoble.listarIzqDer(txaIngre);
+    }//GEN-LAST:event_btnMostrarIngreIzqDerActionPerformed
 
     private void btnGuardarIngreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarIngreActionPerformed
         int cod = Integer.parseInt(txtCodIngre.getText());
@@ -768,107 +612,95 @@ public class WinListaDoble extends javax.swing.JInternalFrame {
         txtSueIngre.setText("");
         txtCodIngre.requestFocus();
 
-        refPrgListaDoble.mostrar(txaElim);
+        refPrgListaDoble.listarIzqDer(txaElim);
     }//GEN-LAST:event_btnGuardarIngreActionPerformed
 
-    private void btnEliminarNodo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarNodo1ActionPerformed
-        if (refPrgListaDoble.estaVacia()){
-            txaElim.setText("LISTA VACÍA\n"+"No hay nodos para eliminar");
-            return;
-        }
-        int codPrimero = refPrgListaDoble.getIni().emp.getCodigo();
-        String nomPrimero = refPrgListaDoble.getIni().emp.getNombre();
-        float suelPrimero = refPrgListaDoble.getIni().emp.getSueldo();
-        
-        int opcion = JOptionPane.showConfirmDialog(
-        null,
-        "¿Deseas eliminar el PRIMER NODO de la lista?\n\n" +
-        "Código: " + codPrimero + "\n" +
-        "Nombre: " + nomPrimero + "\n" +
-        "Sueldo: " + suelPrimero,
-        "Confirmar Eliminación del Primer Nodo",
-        JOptionPane.YES_NO_OPTION,
-        JOptionPane.WARNING_MESSAGE
-        );
-        
-        if (opcion == JOptionPane.YES_OPTION) {
-            refPrgListaDoble.elimNodo1();
-                if (refPrgListaDoble.estaVacia()) {
-                    txaElim.append("Se eliminó el único nodo que había.\n");
-                }
-                else
-                {
-                    txaElim.append("=== LISTA COMPLETA DESPUÉS ===\n");
-                    txaElim.append(refPrgListaDoble.listarIzqDer());
-                }
-                refPrgListaDoble.mostrar(txaIngre);
-                txtCodElim.setText("");
-                txtCodElim.requestFocus();
-        }
-    }//GEN-LAST:event_btnEliminarNodo1ActionPerformed
+    private void btnMostrarIngreDerIzqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarIngreDerIzqActionPerformed
+        refPrgListaDoble.listarDerIzq(txaIngre);
+    }//GEN-LAST:event_btnMostrarIngreDerIzqActionPerformed
 
-    private void btnInfoEliminarNodo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoEliminarNodo1ActionPerformed
+    private void btnInfoMostrarDerIzqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoMostrarDerIzqActionPerformed
         refPrgListaDoble.mostrarInfo(
-        this,
-        "¿Qué hace el botón ELIMIN.NODO 1?",
-        "\n ELIMINACIÓN DEL PRIMER NODO\n\n" +
-        " Este botón elimina automáticamente el PRIMER NODO \n" +
-        " (nodo de inicio) de la lista doblemente enlazada. \n\n" +
-        " DIFERENCIA CON 'ELIMINAR':\n" +
-        " • ELIMINAR: Busca un código específico\n" +
-        " • ELIMIN.NODO 1: Va DIRECTO al inicio\n\n" +
-        " PROCESO:\n" +
-        " 1. Valida que la lista NO esté vacía\n" +
-        " 2. Muestra los datos del nodo a eliminar\n" +
-        " 3. Pide confirmación al usuario\n" +
-        " 4. Elimina el nodo y actualiza los punteros\n" +
-        " 5. Muestra la lista actualizada\n\n" +
-        " CASOS:\n" +
-        " • Si hay 1 nodo → la lista queda vacía\n",
-        "imagenes/eliminar_primer_nodo.png");
-    }//GEN-LAST:event_btnInfoEliminarNodo1ActionPerformed
+            this,
+            "¿Qué hace el botón MOSTRAR D-I?",
+            "Este botón recorre la lista desde el último nodo\n" +
+            "hasta el primero, usando el puntero 'ant'\n" +
+            "Muestra los empleados en orden inverso\n" +
+            "El recorrido se realiza de derecha a izquierda\n" +
+            "y se imprime en el área de texto\n" +
+            "Permite verificar que los enlaces 'ant' funcionan\n" +
+            "y que la lista doble está correctamente enlazada\n",
+            "imagenes/mostrar_der_izq.png");
+    }//GEN-LAST:event_btnInfoMostrarDerIzqActionPerformed
+
+    private void btnMostrarIzqDerElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarIzqDerElimActionPerformed
+        refPrgListaDoble.listarIzqDer(txaElim);
+    }//GEN-LAST:event_btnMostrarIzqDerElimActionPerformed
+
+    private void btnMostrarDerIzqElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarDerIzqElimActionPerformed
+        refPrgListaDoble.listarDerIzq(txaElim);
+    }//GEN-LAST:event_btnMostrarDerIzqElimActionPerformed
+
+    private void btnInfoMostrarDerIzqElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoMostrarDerIzqElimActionPerformed
+        refPrgListaDoble.mostrarInfo(
+            this,
+            "¿Qué hace el botón MOSTRAR D-I?",
+            "Este botón recorre la lista desde el final\n" +
+            "Avanza con el puntero ant hasta llegar al inicio\n" +
+            "Muestra los nodos en orden inverso\n" +
+            "Permite verificar que los enlaces hacia atrás\n" +
+            "siguen funcionando correctamente\n" +
+            "El recorrido es de derecha a izquierda\n" +
+            "y se imprime en el área de texto\n",
+            "imagenes/mostrar_der_izq_elim.png");
+    }//GEN-LAST:event_btnInfoMostrarDerIzqElimActionPerformed
+
+    private void btnInfoMostrarIzqDerElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoMostrarIzqDerElimActionPerformed
+        refPrgListaDoble.mostrarInfo(
+            this,
+            "¿Qué hace el botón MOSTRAR I-D?",
+            "Este botón recorre la lista desde el inicio\n" +
+            "Avanza con el puntero sgte hasta llegar al final\n" +
+            "Muestra cada nodo en orden de ingreso\n" +
+            "Sirve para verificar el estado actual de la lista\n" +
+            "después de eliminar un nodo\n" +
+            "El recorrido es de izquierda a derecha\n" +
+            "y se imprime en el área de texto\n",
+            "imagenes/mostrar_izq_der.png");
+    }//GEN-LAST:event_btnInfoMostrarIzqDerElimActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnDataAEliminar;
-    private javax.swing.JButton btnDataAGuardarIngre;
     private javax.swing.JButton btnDataActualizadaElim;
     private javax.swing.JButton btnDataActualizadaIngre;
     private javax.swing.JButton btnEliminar;
-    private javax.swing.JButton btnEliminarNodo1;
     private javax.swing.JButton btnGuardarIngre;
     private javax.swing.JButton btnInfoDataOriginalElim;
     private javax.swing.JButton btnInfoDataOriginalIngre;
     private javax.swing.JButton btnInfoEliminar;
-    private javax.swing.JButton btnInfoEliminarNodo1;
     private javax.swing.JButton btnInfoGuardar;
     private javax.swing.JButton btnInfoListaSimple;
-    private javax.swing.JButton btnInfoMostrarElim;
-    private javax.swing.JButton btnInfoMostrarIngre;
+    private javax.swing.JButton btnInfoMostrarDerIzq;
+    private javax.swing.JButton btnInfoMostrarDerIzqElim;
+    private javax.swing.JButton btnInfoMostrarIzqDer;
+    private javax.swing.JButton btnInfoMostrarIzqDerElim;
     private javax.swing.JButton btnInfoOrganizacionListaSimple;
-    private javax.swing.JButton btnInfoUso;
-    private javax.swing.JButton btnMostrarElim;
-    private javax.swing.JButton btnMostrarIngre;
+    private javax.swing.JButton btnMostrarDerIzqElim;
+    private javax.swing.JButton btnMostrarIngreDerIzq;
+    private javax.swing.JButton btnMostrarIngreIzqDer;
+    private javax.swing.JButton btnMostrarIzqDerElim;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
